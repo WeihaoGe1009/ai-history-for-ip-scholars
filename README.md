@@ -39,6 +39,8 @@ Each module includes:
 - 🧪 Interactive Colab demo
 - 🖼️ Visualizations and examples
 
+
+In this table, i should add references. 
 | Module | Title                                                  | Focus                                       | Era         | Historical Role                                                                 |
 | ------ | ------------------------------------------------------ | ------------------------------------------- | ----------- | ------------------------------------------------------------------------------- |
 | `01`   | 🧮 *Perceptron and Logistic Regression*                | Rule-based, linear learning                 | 1950s–1960s | First generation of ML models: binary classification via weights and thresholds |
@@ -49,6 +51,8 @@ Each module includes:
 | `06`   | 🎨 *Diffusion Models*                                  | Generating images from noise                | 2021–Now    | Probabilistic generative models; stylized creation rather than reproduction     |
 | `07`   | 🤔 *Chain-of-Thought and Reflection*                   | Reasoning, verification, and self-checking  | 2023+       | Structural techniques for alignment, safety, and transparent decision-making    |
 
+
+## References
 
 ## AI Usage and Content Disclaimer
 Portions of this repository, including code and explanatory text, were developed with the assistance of artificial intelligence tools (e.g., large language models). All generated content was reviewed and curated to ensure accuracy and educational clarity.
