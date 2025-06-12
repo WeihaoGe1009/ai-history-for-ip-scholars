@@ -35,7 +35,8 @@ To help IP scholars and students:
 
 ### Module 1: 
 * Open and run this notebook [Open in Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/01_perceptron_logreg_naive_bayes/01_perceptron_logreg_naivebayes.ipynb) 
-* Open and run this dummy notebook [Open in Colab](https://colab.research.google.com/github/WeihaoGe1009/ml-demos-temp-inputs/blob/main/01_perceptron_logreg/01_perceptron_logreg_naivebayes.ipynb)
+
+(this link will not work at this stage, but tested working with dummy repo)
 
 Each module includes:
 - 📖 Brief history and model explanation
