@@ -14,8 +14,14 @@ Source: Folger Shakespeare Library
 URL: https://www.folger.edu/explore/shakespeares-works/shakespeares-sonnets/
 License: Public Domain
 
-U.S. Constitution (Article I)
+U.S. Constitution
 Source: U.S. National Archives
 URL: https://www.archives.gov/founding-docs/constitution-transcript
 License: Public Domain
 
+U.S. Bill of Rights
+Source: U.S. National Archives
+URL: https://www.archives.gov/founding-docs/bill-of-rights-transcript
+License: Public Domain
+
+##  

@@ -43,7 +43,7 @@ Each module includes:
 In this table, i should add references. 
 | Module | Title                                                  | Focus                                       | Era         | Historical Role                                                                 |
 | ------ | ------------------------------------------------------ | ------------------------------------------- | ----------- | ------------------------------------------------------------------------------- |
-| `01`   | 🧮 *Perceptron and Logistic Regression*                | Rule-based, linear learning                 | 1950s–1960s | First generation of ML models: binary classification via weights and thresholds |
+| `01`   | 🧮 *Classification: Perceptron, Logistic Regression, and Naive-Bayes*                | linear, probabilistic, and rule-based classification using word frequencies                  | 1950s–1970s | First generation of ML models: Demonstrates how early AI systems used simple statistical rules and word patterns - without understanding meaning - to classify language. |
 | `02`   | 🧠 *Neural Networks (MLP)*                             | Multi-layer abstraction                     | 1980s–2000s | Overcame linear limits; enabled deeper pattern learning with hidden layers      |
 | `03`   | 📊 *Probabilistic Models (Naive Bayes, Markov, Music)* | Frequency-based classification & prediction | 1960s–2000s | Sequence modeling using statistics, including early text and music generation   |
 | `04`   | 🔁 *Autoencoders*                                      | Compression and reconstruction              | 2000s–2010s | Early unsupervised representation learning; led to pretraining ideas            |
