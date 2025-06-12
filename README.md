@@ -23,7 +23,8 @@ To help IP scholars and students:
 * **Step 1**: Scroll down to the [**Modules**](#modules) section below.
 * **Step 2**: Click the "Open in Colab" link for the module
 * **Step 3**: The notebook will open in a new browser tab
-* **Step 4**: Click the **Play button** next to each code and run it.
+* **Step 4**: Click the **Play button** next to each code and run it
+* Tip: After opening this notebook in Colab, go to `Runtime → Run all` to execute everything automatically.
 * Note: You may see a prompt like "This notebook was not authored by Google” — click “**Run Anyway**”
 * All data is included in this public GitHub Repo
 * After closing the tab of google colab, no changes are saved unless you make a copy.
@@ -33,10 +34,13 @@ To help IP scholars and students:
 * provide a colab link explicitly with [Open in Colab]
 * add a description of each module
 
-### Module 1: 
+### Module 1 - Classification: Perceptron, Logistic Regression, and Naive Bayes 
+* Explore how early models like the Perceptron, Logistic Regression, and Naive Bayes were used to classify text. This module uses Bag-of-Words to distinguish Shakespearean poetry from U.S. legal language.
 * Open and run this notebook [Open in Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/01_perceptron_logreg_naive_bayes/01_perceptron_logreg_naivebayes.ipynb) 
 
 (this link will not work at this stage, but tested working with dummy repo)
+
+### Module 2 - Neural Network
 
 Each module includes:
 - 📖 Brief history and model explanation
@@ -57,6 +61,8 @@ In this table, i should add references.
 
 
 ## References
+Each module includes links and references relevant to the models it covers.  
+A full set of historical and academic references will be added in a future update.
 
 ## AI Usage and Content Disclaimer
 Portions of this repository, including code and explanatory text, were developed with the assistance of artificial intelligence tools (e.g., large language models). All generated content was reviewed and curated to ensure accuracy and educational clarity.
