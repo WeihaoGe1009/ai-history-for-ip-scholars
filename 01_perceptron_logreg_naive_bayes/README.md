@@ -4,7 +4,7 @@ This module introduces some of the earliest machine learning models used for tex
 
 ---
 
-## 🔍 What’s Inside
+## What’s Inside
 
 - `01_perceptron_logreg_naivebayes.ipynb` – The interactive Google Colab notebook ([Run on Google Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/01_perceptron_logreg_naive_bayes/01_perceptron_logreg_naivebayes.ipynb))  
 - `data/` – Contains raw poetic/legal texts and labeled data used for training  
@@ -42,7 +42,7 @@ U.S. Bill of Rights [U.S. National Archives - The Bill of Rights: A Transcriptio
 License: Public Domain
 
 ## References
-**Bag of Words**: Qader, Wisam A., Musa M. Ameen, and Bilal I. Ahmed. "An overview of bag of words; importance, implementation, applications, and challenges." 2019 international engineering conference (IEC). IEEE, 2019.
-**Perceptron**: Rosenblatt, Frank. "The perceptron: a probabilistic model for information storage and organization in the brain." Psychological review 65.6 (1958): 386.
-**Logistic Regression**: Freund, Rudolf J., and William J. Wilson. Statistical methods. Elsevier, 2003.
-**Naive Bayes**: Rennie, Jason D., et al. "Tackling the poor assumptions of naive bayes text classifiers." Proceedings of the 20th international conference on machine learning (ICML-03). 2003. 
+- **Bag of Words**: Qader, Wisam A., Musa M. Ameen, and Bilal I. Ahmed. "An overview of bag of words; importance, implementation, applications, and challenges." 2019 international engineering conference (IEC). IEEE, 2019.
+- **Perceptron**: Rosenblatt, Frank. "The perceptron: a probabilistic model for information storage and organization in the brain." Psychological review 65.6 (1958): 386.
+- **Logistic Regression**: Freund, Rudolf J., and William J. Wilson. Statistical methods. Elsevier, 2003.
+- **Naive Bayes**: Rennie, Jason D., et al. "Tackling the poor assumptions of naive bayes text classifiers." Proceedings of the 20th international conference on machine learning (ICML-03). 2003. 
