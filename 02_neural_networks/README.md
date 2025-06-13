@@ -31,10 +31,14 @@
 
 
 ## Data
-We use the MNIST data set, which includes handwritings of numbers collected from US postal office. (more description about MNIST). The MNIST data set is implemented in the TensorFlow package (citation) and can be loaded directly when the TensorFlow package is loaded in the file
+We use the MNIST(Modified National Institute of Standards and Technology database) data set, which includes handwritings of numbers collected from US postal office. (more description about MNIST). The MNIST data set is implemented in the TensorFlow package (citation) and can be loaded directly when the TensorFlow package is loaded in the file
+
 
 ## Data Source:
 <---- add TensorFlow data source citation ----->  
 
 ## References
-<---- add References ---> 
+<---- add References --->
+
+- **MNIST data set*** LeCun, Yann, et al. "Gradient-based learning applied to document recognition." Proceedings of the IEEE 86.11 (2002): 2278-2324. 
+ 
