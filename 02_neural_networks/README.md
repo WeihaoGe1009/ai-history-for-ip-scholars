@@ -2,40 +2,37 @@
 
 <---- briefly describe the goal of this module and the historical role of Neural Network ----> 
 
+
 ---
 
 ## What’s Inside
 
-- `02_neural_network.ipynb` – The interactive Google Colab notebook ([Run on Google Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/...)
+- `02_01_simple_neural_network.ipynb` – The interactive Google Colab notebook ([Run on Google Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/02_neural_networks/02_01_simple_neural_network.ipynb))
+- `02_02_convolutional_neural_network.ipynb` - The interactive Google Colab notebook ([Run on Google Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/02_neural_networks/02_02_convolutional_neural_network.ipynb))  
+- `models/` - Pre-trained models to load into the notebooks 
 
 ---
 
 ## What You'll Learn
 
-<---- bullet points about how neural network "recognize" patterns in image and produce images ---> 
+- How neural networks "recognizes" hand-written digits and associate them with numbers
+- What features are learnt by neural network models
+- How to generate patterns based on features learnt by the neural networks.
 
 ## Take-Home Messages
 
-## temporary section: High-level plan
-
-| Step | Title                                       | Purpose                                                                                                               |
-| ---- | ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| 1    | **Load and Visualize MNIST**                | Introduce the dataset: small, intuitive, no setup                                                                     |
-| 2    | **Build a Simple MLP**                      | Feedforward-only, enough to classify digits                                                                           |
-| 3    | **Explain Feedforward/Backprop (Visually)** | Use light-up neuron diagrams (no numbers), optionally name concepts (weights, activation) only if helpful             |
-| 4    | **Classify Test Samples**                   | Predict unseen digits from the test set, highlight novelty                                                            |
-| 5    | **Visualize Hidden Layers**                 | Show neuron weights as 28×28 images to reveal stroke/edge detection                                                   |
-| 6    | **Generate Digit-Like Images**              | Synthesize new digits from the trained model (reversing or decoding), emphasize how output differs from training data |
-| 7    | **Discuss IP Implications**                 | Frame outputs as transformations, not copies — acknowledge high similarity as a valid concern for scholars to explore |
-
-
+- Neural networks learns "patterns": curves, blobs, lines, corners, etc.
+- The patterns learnt by different neural nodes in the network are "activated" by different inputs, which leads to "recognition" of the inputs.
+- With the patterns learnt, neural networks can generate new images, which is the early basis of more sophisticated AIs. 
 
 ## Data
-We use the MNIST(Modified National Institute of Standards and Technology database) data set, which includes handwritings of numbers collected from US postal office. (more description about MNIST). The MNIST data set is implemented in the TensorFlow package (citation) and can be loaded directly when the TensorFlow package is loaded in the file
+This demo uses the MNIST data set, a public collection of handwritten digit images (0-9), originally created by the Modified National Institute of Standards and Technology (MNIST), widely used to teach and evaluate machin-learning models.
 
 
 ## Data Source:
-<---- add TensorFlow data source citation ----->  
+
+The MNIST dataset is freely available through TensorFlow, an open-source library developed by Google. MNIST is in the public domain. 
+
 
 ## References
 <---- add References --->
