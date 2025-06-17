@@ -1,6 +1,6 @@
 # Neural Network: Perception, Pattern, and Prototype
 
-Neural networks have played a central role in the history of machine learning — first inspiring hope in the 1950s, then fading from favor, and later returning to power modern AI.
+Neural networks have played a central role in the history of machine learning — first inspiring hope in the 1950s, then fading from favor, and later returning to power modern AI in the era of 1980s-2000s.
 This module offers a visual introduction to how these networks learn from examples.
 
 In the first part, a simple model learns to recognize handwritten digits and reveals a blurry "average" shape based on learning. In the second, a more advanced network identifies patterns like strokes and generate new, scribble-like images from random input. Together, these demos show how machines begin to "see" — not by understanding, but by building patterns from data.
