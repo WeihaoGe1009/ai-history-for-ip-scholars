@@ -48,7 +48,7 @@ This module explores how machines can **generate text, music, and plausible resp
 
 ## References
 - **Markov Chain**: Meyn, Sean, and Richard L. Tweedie. Markov Chains and Stochastic Stability. 2nd ed., with a prologue by Peter W. Glynn, Cambridge University Press, 2009. 
-- **Brown Corpus**: Francis, W. Nelson, and Henry Kucera. Brown Corpus. Compiled 1961. Accessed via the NLTK Toolkit, https://www.nltk.org/nltk\_data/. 
+- **Brown Corpus**: Francis, W. Nelson, and Henry Kucera. Brown Corpus. Compiled 1961. Accessed via the NLTK Toolkit, https://www.nltk.org/nltk_data/. 
 - **nltk**: Bird, Steven, Edward Loper and Ewan Klein (2009), Natural Language Processing with Python. O'Reilly Media Inc. 
 - **pyFluidSynth**: PyFluidSynth Developers. pyFluidSynth: Python Bindings for the FluidSynth SoundFont Synthesizer. Python Package Index, https://pypi.org/project/pyFluidSynth/.
 - **FluidSynth**: FluidSynth Developers. FluidSynth: A Software Synthesizer Based on the SoundFont 2 Specifications. https://www.fluidsynth.org/.
