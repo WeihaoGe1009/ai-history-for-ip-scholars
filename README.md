@@ -40,10 +40,12 @@ To help IP scholars and students:
 
 (this link will not work at this stage, but tested working with dummy repo)
 
-### Module 2 - Neural Network: Learning Patterns to Scribble
+### Module 2 - Neural Network: Neural Network: Perception, Pattern, and Prototype 
 * Analyze how simple neural network like Multilayer Perceptron (MLP) processes image of handwritten digits. Open and run this notebook [Open in Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/02_neural_networks/02_01_simple_neural_network.ipynb) 
 * Utilize a simple convolutional neural network (CNN) to process image of handwritten digits, and generate handwriting-like scribbles. Open and run this notebook [Open in Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/02_neural_networks/02_02_convolutional_neural_network.ipynb) 
- 
+
+### Module 3 - Markov Chain: Language, Probability & Illusion 
+* View how models like Markov Chain generate contents and how it is different from search. Open and run this notebook [Open in Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/03_markov/03_markov.ipynb)
 
 
 Each module includes:
@@ -56,8 +58,8 @@ In this table, i should add references.
 | Module | Title                                                  | Focus                                       | Era         | Historical Role                                                                 |
 | ------ | ------------------------------------------------------ | ------------------------------------------- | ----------- | ------------------------------------------------------------------------------- |
 | `01`   |  *Classification: Perceptron, Logistic Regression, and Naive-Bayes*                | linear, probabilistic, and rule-based classification using word frequencies                  | 1950s–1970s | First generation of ML models: Demonstrates how early AI systems used simple statistical rules and word patterns - without understanding meaning - to classify language. |
-| `02`   |  *Neural Networks*                             | pattern learning and image generation           | 1980s–2000s | Overcame linear limits; enabled deeper pattern learning with hidden layers      |
-| `03`   | 📊 *Probabilistic Models (Naive Bayes, Markov, Music)* | Frequency-based classification & prediction | 1960s–2000s | Sequence modeling using statistics, including early text and music generation   |
+| `02`   |  *Neural Network: Perception, Pattern, and Prototype*                             | pattern learning and image generation           | 1980s–2000s | Overcame linear limits; enabled deeper pattern learning with hidden layers      |
+| `03`   |  *Markov Chain: Language, Probability, and Illusion* | Frequency-based content generation | 1960s–2000s | Sequence modeling using statistics, including early text and music generation   |
 | `04`   | 🔁 *Autoencoders*                                      | Compression and reconstruction              | 2000s–2010s | Early unsupervised representation learning; led to pretraining ideas            |
 | `05`   | ✍️ *Large Language Models (LLMs)*                      | Deep context prediction via attention       | 2017–Now    | Scaled transformer-based generation; foundational for modern generative AI      |
 | `06`   | 🎨 *Diffusion Models*                                  | Generating images from noise                | 2021–Now    | Probabilistic generative models; stylized creation rather than reproduction     |
