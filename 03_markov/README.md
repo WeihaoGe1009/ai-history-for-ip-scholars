@@ -1,4 +1,4 @@
-# Module 3 - Markov Chain: Language, Probability & Illusion
+# Markov Chain: Language, Probability & Illusion
 
 This module explores how machines can **generate text, music, and plausible responses** using simple probabilities — without understanding any meaning. Through the lens of **Markov chains**, we demonstrate how models can assemble sequences letter by letter, note by note, or word by word, guided only by the **likelihood of transitions**. What emerges may resemble real language or music, but is in fact built from chance — offering a glimpse into the **illusion of understanding** that statistical models can create.
 
