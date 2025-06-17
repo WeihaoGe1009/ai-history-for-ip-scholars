@@ -1,6 +1,9 @@
-# Neural Network
+# Neural Network: Perception, Pattern, and Prototype
 
-<---- briefly describe the goal of this module and the historical role of Neural Network ----> 
+Neural networks have played a central role in the history of machine learning — first inspiring hope in the 1950s, then fading from favor, and later returning to power modern AI.
+This module offers a visual introduction to how these networks learn from examples.
+
+In the first part, a simple model learns to recognize handwritten digits and reveals a blurry "average" shape based on learning. In the second, a more advanced network identifies patterns like strokes and generate new, scribble-like images from random input. Together, these demos show how machines begin to "see" — not by understanding, but by building patterns from data.
 
 
 ---
@@ -35,7 +38,6 @@ The MNIST dataset is freely available through TensorFlow, an open-source library
 
 
 ## References
-<---- add References --->
-
-- **MNIST data set*** LeCun, Yann, et al. "Gradient-based learning applied to document recognition." Proceedings of the IEEE 86.11 (2002): 2278-2324. 
+- **Neural Network**: Schmidhuber, Jürgen. "Deep learning in neural networks: An overview." Neural networks 61 (2015): 85-117. 
+- **MNIST data set**: LeCun, Yann, et al. "Gradient-based learning applied to document recognition." Proceedings of the IEEE 86.11 (2002): 2278-2324. 
  
