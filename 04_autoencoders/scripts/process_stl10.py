@@ -11,8 +11,8 @@ from PIL import Image
 url = "https://ai.stanford.edu/~acoates/stl10/stl10_binary.tar.gz"
 archive_name = "stl10_binary.tar.gz"
 extract_folder = "stl10_binary"
-output_train_folder = "stl10_train_images_96x96"
-output_test_folder = "stl10_test_images_96x96"
+output_train_folder = "../data/stl10_train_images_96x96"
+output_test_folder = "../data/stl10_test_images_96x96"
 resize_to = None  # Set to (64, 64) if you want smaller images
 
 # Class label map (not used unless you want to group)
@@ -54,23 +54,25 @@ labels_test = read_labels(os.path.join(extract_folder, "test_y.bin"))  # 1–10 
 os.makedirs(output_train_folder, exist_ok=True)
 os.makedirs(output_test_folder, exist_ok=True)
 
-for i, (img_train, label_train) in enumerate(zip(images_train, labels_train)):
-    img_pil = Image.fromarray(img)
+# avoid zip to prevent misalignment
+for i in range(len(labels_train)):
+    img_pil = Image.fromarray(images_train[i])
     if resize_to:
         img_pil = img_pil.resize(resize_to)
 
-    filename = f"{i:05d}_class{label}.jpg"
+    filename = f"{i:05d}_class{labels_train[i]}.jpg"
     img_pil.save(os.path.join(output_train_folder, filename))
 
 print(f"Saved {len(images_train)} images to '{output_train_folder}' (resolution: {resize_to or '96x96'})")
 
-for i, (img_test, label_test) in enumerate(zip(images_test, labels_test)):
-    img_pil = Image.fromarray(img)
+
+for i in range(len(labels_test)):
+    img_pil = Image.fromarray(images_test[i])
     if resize_to:
         img_pil = img_pil.resize(resize_to)
 
-    filename = f"{i:05d}_class{label}.jpg"
-    img_pil.save(os.path.join(output_test_folder, filename))
+    filename = f"{i:05d}_class{labels_test[i]}.jpg"
+    img_pil.save(os.path.join(output_train_folder, filename))
 
 print(f"Saved {len(images_test)} images to '{output_test_folder}' (resolution: {resize_to or '96x96'})")
 
