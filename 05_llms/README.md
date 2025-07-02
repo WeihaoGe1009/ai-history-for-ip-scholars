@@ -9,6 +9,23 @@ In previous modules, we explored models that made decisions based on simple word
 * `data/` - contains the subset from the SST2 data set for sentiment analysis 
 * `scripts/` - contains the script that curates the data 
 
+## What You'll Learn
+* How modern language model work differently from the models in our previous demos, such as Bag of Words.
+* How modern language model utilize the context.
+* An oversimplified case to see how training data influences the output model.
+
+## Take-Home Messages
+* Modern language model utilize more than word frequencies.  
+* Modern language model "pays different **attentions**" to the context.
+* It is possible to trace the influence of each data sample on the trained model. 
+
+## Data
+* Section 1:
+    * frequency vs context: manually written sentences
+    * sentiment analysis: a tiny subset from the **Stanford Sentiment Treebank (SST-2)**
+* Section 2: manually written sentences
+* Section 3: manually written numerical data  
+
 ## Dataset Attribution and License
 
 The data in `sst2_long_subset.csv` is a 1000-example sample from the **Stanford Sentiment Treebank (SST-2)**., and we only select phrases with larger than 8 words.
@@ -22,4 +39,9 @@ The data in `sst2_long_subset.csv` is a 1000-example sample from the **Stanford 
 - Full dataset documentation:
 https://huggingface.co/datasets/glue/viewer/sst2 
 
- 
+## References
+* **SBERT**
+* **BERT** 
+* **SST-2**
+* **Transformer** Vaswani, Ashish, et al. "Attention is all you need." Advances in neural information processing systems 30 (2017).
+* For full citations related to influence tracing, please see the optional reading material []()  
