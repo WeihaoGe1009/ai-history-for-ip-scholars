@@ -33,12 +33,12 @@ To help IP scholars and students:
 ## Modules
 * provide a colab link explicitly with [Open in Colab]
 * add a description of each module
+**MODULEL LINKS will not work at this stage, but tested working with dummy repo**
+
 
 ### Module 1 - Classification: Perceptron, Logistic Regression, and Naive Bayes 
 * Explore how early models like the Perceptron, Logistic Regression, and Naive Bayes were used to classify text. This module uses Bag-of-Words to distinguish Shakespearean poetry from U.S. legal language.
 * Open and run this notebook [Open in Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/01_perceptron_logreg_naive_bayes/01_perceptron_logreg_naivebayes.ipynb) 
-
-(this link will not work at this stage, but tested working with dummy repo)
 
 ### Module 2 - Neural Network: Neural Network: Perception, Pattern, and Prototype 
 * Analyze how simple neural network like Multilayer Perceptron (MLP) processes image of handwritten digits. Open and run this notebook [Open in Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/02_neural_networks/02_01_simple_neural_network.ipynb) 
@@ -46,6 +46,13 @@ To help IP scholars and students:
 
 ### Module 3 - Markov Chain: Language, Probability & Illusion 
 * View how models like Markov Chain generate contents and how it is different from search. Open and run this notebook [Open in Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/03_markov/03_markov.ipynb)
+
+### Module 4 - Autoencoders & Compression - A Responsible Perspective
+* Explore how autoencoders learn patterns from images, and its applications in data compression and image denoising. [Open in Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/04_autoencoders/04_autoencoder.ipynb) 
+
+### Module 5 - Large Language Models — How Models Use Context, and What Their Training Data Contributes
+* Briefly analyze how modern language models utilize "context" in a text. Additionally, we evaluate the influence of each sample in the training data set on a model in a very simple case. [Open in Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/05_llms/05_llms.ipynb)
+* optional reading on more in-depth discussion on tracing influence of the training data in the large language models. [View on Github](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/05_llms/optional_reading_training_data_influence.md)    
 
 
 Each module includes:
@@ -60,8 +67,8 @@ In this table, i should add references.
 | `01`   |  *Classification: Perceptron, Logistic Regression, and Naive-Bayes*                | linear, probabilistic, and rule-based classification using word frequencies                  | 1950s–1970s | First generation of ML models: Demonstrates how early AI systems used simple statistical rules and word patterns - without understanding meaning - to classify language. |
 | `02`   |  *Neural Network: Perception, Pattern, and Prototype*                             | pattern learning and image generation           | 1980s–2000s | Overcame linear limits; enabled deeper pattern learning with hidden layers      |
 | `03`   |  *Markov Chain: Language, Probability, and Illusion* | Frequency-based content generation | 1960s–2000s | Sequence modeling using statistics, including early text and music generation   |
-| `04`   | 🔁 *Autoencoders*                                      | Compression and reconstruction              | 2000s–2010s | Early unsupervised representation learning; led to pretraining ideas            |
-| `05`   | ✍️ *Large Language Models (LLMs)*                      | Deep context prediction via attention       | 2017–Now    | Scaled transformer-based generation; foundational for modern generative AI      |
+| `04`   |  *Autoencoders*                                      | Compression and reconstruction              | 2000s–2010s | Early unsupervised representation learning; led to pretraining ideas            |
+|`05`   |  *Large Language Models (LLMs)*                      | Deep context prediction via attention       | 2017–Now    | Scaled transformer-based generation; foundational for modern generative AI      |
 | `06`   | 🎨 *Diffusion Models*                                  | Generating images from noise                | 2021–Now    | Probabilistic generative models; stylized creation rather than reproduction     |
 | `07`   | 🤔 *Chain-of-Thought and Reflection*                   | Reasoning, verification, and self-checking  | 2023+       | Structural techniques for alignment, safety, and transparent decision-making    |
 
@@ -71,16 +78,17 @@ Each module includes links and references relevant to the models it covers.
 A full set of historical and academic references will be added in a future update.
 
 ## AI Usage and Content Disclaimer
-Portions of this repository, including code and explanatory text, were developed with the assistance of artificial intelligence tools (e.g., large language models). All generated content was reviewed and curated to ensure accuracy and educational clarity.
+Portions of this repository, including code and explanatory text, were developed with the assistance of artificial intelligence tools (e.g., large language models). All generated content was reviewed and curated to ensure accuracy and educational clarity. Human efforts include: design and outline each demo, decide which models and tests to use, hyperparameter tuning, content of the text.
 
 All data used in these demonstrations were either:
 
 * **Created synthetically by the author(s)** for illustrative purposes, or
 
-* **Obtained from the public domain** and explicitly free of copyright restrictions.
+* **Publicly available for research and educational use**
 
-No copyrighted or proprietary data, code, or materials were used in the construction of this resource.
 
-This project is licensed under the MIT License. You are free to reuse, modify, and distribute the materials in this repository, provided that you include proper attribution to the original authors.
+No unauthorized copyrighted or proprietary data, code, or materials were used. All datasets and tools are either synthetic, open source, or publicly released for research and educational purposes.
+
+This project is licensed under the MIT License. You are free to reuse, modify, and distribute the materials in this repository, provided that you include proper attribution to the original authors, Weihao Ge & Xiaoren Wang.
 
 For details, see the [LICENSE](./LICENSE) file. 
