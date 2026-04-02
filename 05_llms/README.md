@@ -4,7 +4,7 @@ In previous modules, we explored models that made decisions based on simple word
 
 
 ## What's Inside
-* `05_llms.ipynb` - The interactive Google Colab notebook ([Run on Google Colab]())
+* `05_llms.ipynb` - The interactive Google Colab notebook ([Run on Google Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/05_llms/05_llms.ipynb))
 * `optional_reading_training_data_influence.md` - The optional reading document discussing tracing how the data used to train the models would influence the models.
 * `data/` - contains the subset from the SST2 data set for sentiment analysis 
 * `scripts/` - contains the script that curates the data 
