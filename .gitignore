@@ -192,3 +192,9 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# System
+.DS_Store
+
+# large files
+04_autoencoders/data/raw/
