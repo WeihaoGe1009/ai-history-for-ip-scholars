@@ -77,6 +77,17 @@ In this table, i should add references.
 Each module includes links and references relevant to the models it covers.  
 A full set of historical and academic references will be added in a future update.
 
+## Questions & Requests
+
+Have a question about a concept, or want another topic explained? Two ways to reach me:
+
+- **Email** (no GitHub account needed): [how.ai.works.law.policy@gmail.com]
+- **GitHub Q&A**: post in [Discussions → Q&A](https://github.com/WeihaoGe1009/ai-for-ip-scholars/discussions/categories/q-a)
+
+Emailed questions of general interest may be posted (anonymized) to the Q&A, so answers stay searchable for everyone.
+
+Found a bug in a notebook (broken cell, typo)? Please open an [Issue](https://github.com/WeihaoGe1009/ai-for-ip-scholars/issues) instead.
+
 ## AI Usage and Content Disclaimer
 Portions of this repository, including code and explanatory text, were developed with the assistance of artificial intelligence tools (e.g., large language models). All generated content was reviewed and curated to ensure accuracy and educational clarity. Human efforts include: design and outline each demo, decide which models and tests to use, hyperparameter tuning, content of the text.
 
