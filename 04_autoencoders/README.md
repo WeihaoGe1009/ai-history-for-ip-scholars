@@ -5,13 +5,13 @@ What does this module do, what is autoencoder, what do we learn
 ---
 
 ## What's inside
-- `04_autoencoder.ipynb` - the interactive Google Colab notebook ([Run on Google Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/04_autoencoders/04_autoencoder.ipynb)),
+`04_autoencoder.ipynb` - the interactive Google Colab notebook ([Run on Google Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/04_autoencoders/04_autoencoder.ipynb)),
 
 containing: 
-    * visual walkthrough of autoencoder reconstruction
-    * comparison of outputs
-    * under-the-hood visualization (layer outputs, compressed representation)
-    * Applications and IP-relevant insights 
+> * visual walkthrough of autoencoder reconstruction
+> * comparison of outputs
+> * under-the-hood visualization (layer outputs, compressed representation)
+> * Applications and IP-relevant insights 
 
 - scripts/
 Core utilities and training code:
