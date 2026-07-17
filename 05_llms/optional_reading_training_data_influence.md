@@ -3,7 +3,7 @@
 
 ## Overview
 
-In the interactive demo earlier, we simulate training influence <--filling the demo here-->. This gives us an intuitive sense of what it might mean for training data to shape a model’s behavior. But in real-world systems — especially in large language models — is it possible to rigorously trace back what data influenced a particular output?
+In the interactive demo earlier, we simulate training influence in demo 3. This gives us an intuitive sense of what it might mean for training data to shape a model’s behavior. But in real-world systems — especially in large language models — is it possible to rigorously trace back what data influenced a particular output?
 
 Surprisingly, yes — at least in part. A growing body of research has begun to develop methods that estimate how much a particular training example contributes to a model’s behavior. These approaches don’t solve the problem entirely, but they offer the first steps toward visibility — and accountability.
 
@@ -180,31 +180,42 @@ It estimates which training points **shaped the model’s internal behavior** mo
 
 Pruthi, Garima, et al. "Estimating training data influence by tracing gradient descent." Advances in Neural Information Processing Systems 33 (2020): 19920-19930. [arXiv link](https://arxiv.org/abs/2002.08484) .
 
-### Emerging Use in Auditing Contexts (Research + Regulation) 
-<--- need to manually verify the source ---> 
-These algorithms are not yet *routinely cited in court*, but they are entering **formal auditing tools, research partnerships, and policy proposals** - and could be used in future litigation or regulatory proceedings.
+### Emerging Use in Auditing Contexts (Research and Regulation)
 
-#### 1. OpenAI Copyright Lawsuits (2023–present)
-* Plaintiffs (authors, programmers) allege that GPT-like models reproduce copyrighted content.
+Attribution algorithms are not yet routinely cited in court. What has actually reached formal settings splits into two layers, and the split is itself informative: output-level tracing (checking whether a model reproduces specific text) is mature enough to appear in litigation, while training-influence tracing (estimating which training examples shaped a behavior) remains in research tools, governance frameworks, and policy proposals. This list is not exhaustive.
 
-* While no court has yet ordered OpenAI to run influence tracing, **experts have proposed using methods like Influence Functions or TracIn** to determine if the model was influenced by specific training samples.
+#### 1. Copyright litigation: output matching, not influence tracing (2023–present)
 
-* Influence tracing has been discussed in **amicus briefs and expert opinions**, especially from researchers at organizations like **EPIC, AI Now Institute, and Mozilla Foundation.**
+Authors, programmers, and news organizations have sued OpenAI, Meta, and others over the use of copyrighted works in training. No court has ordered a defendant to run influence tracing. The tracing tooling that has surfaced in litigation operates at the output level: a 2026 deposition in the news publishers' case revealed that OpenAI had built internal tools (reported as "Project Giraffe"), including a Bloom filter that flagged and logged when ChatGPT outputs likely reproduced copyrighted journalism. Whether output matching of this kind, rather than training-influence estimation, becomes the standard of proof in these cases is an open question.
 
-#### 2. NIST and OECD Auditing Frameworks
-* The **NIST AI Risk Management Framework (2023)** includes traceability as a core pillar — and influence estimation is being integrated in risk assessment tooling (especially via model documentation, training lineage, and data valuation).
+#### 2. Attribution methods in legal and policy discussion
 
-* The **OECD.AI framework** includes auditability, data governance, and influence awareness under “Transparency and Explainability.”
+Influence estimation appears in venues where legal scholars and technologists meet, if not yet in briefs. A 2026 Authors Alliance workshop on DMCA §1202 and attribution standards discussed influence functions, data Shapley values, and TracIn as techniques that can estimate training-data contributions. A parallel research thread proposes Shapley-style attribution as the basis for royalty and compensation schemes, motivated explicitly by the ongoing copyright disputes (Deng and Ma; Wang et al.). Whether courts or legislatures would accept an approximation as a basis for payment is, again, an open question.
 
-#### 3. Meta AI’s internal audits (2022–2024)
-* In several published audits of LLaMA and multilingual models, Meta researchers have cited gradient-based influence tracing and dataset analysis using leave-one-out approximations and filtering.
+#### 3. Governance frameworks: NIST, OECD, EU
 
-* One internal paper tested **gradient attribution and data influence tracking** on multilingual bias and misinformation tasks.
+The NIST AI Risk Management Framework [(2023)](https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf) states that "maintaining the provenance of training data and supporting attribution of the AI system's decisions to subsets of training data can assist with both transparency and accountability." This is the clearest framework-level endorsement of influence-style attribution to date, though the framework is voluntary and names no specific technique. The OECD AI Principles include [transparency and explainability](https://oecd.ai/en/dashboards/ai-principles/P7) among their core values. The [EU AI Act](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-53) goes further in a different direction: providers of general-purpose models must publish a sufficiently detailed summary of training content, a provenance mandate rather than an influence mandate.
 
-#### 4. BigScience Project / BLOOM model (2022)
-* As part of a **publicly auditable LLM**, the BigScience collaboration tested **subset retraining, Shapley approximations**, and **gradient logging** to track data contributions and inform open governance.
+#### 4. Industrial and open-science practice
 
-* These techniques were part of a **model card** released alongside BLOOM and reflected real usage of influence and traceability tooling. 
+Anthropic researchers applied influence functions to large language models to study which training sequences shape model outputs (Grosse et al., 2023), the most prominent published industrial use of the technique at scale. On the open-science side, the BigScience collaboration that produced BLOOM (2022) built data governance structures prioritizing the agency of data rights-holders, released model and data cards, and later published the ROOTS Search Tool, which lets outside researchers inspect the 1.6 TB training corpus directly. BLOOM's transparency works through documentation and searchable data access, not through influence algorithms, which illustrates that provenance and influence estimation are separable commitments.
+
+#### References
+Grosse, Roger, et al. "Studying Large Language Model Generalization with Influence Functions." arXiv, 2023, arxiv.org/abs/2308.03296.
+
+Deng, Junwei, and Jiaqi Ma. "Computational Copyright: Towards a Royalty Model for Music Generative AI." arXiv, 2023, arxiv.org/abs/2312.06646.
+
+"Notes from a Recent Authors Alliance Workshop: DMCA §1202 and Attribution Standards for AI." Authors Alliance, 19 Feb. 2026, www.authorsalliance.org/2026/02/19/notes-from-a-recent-authors-alliance-workshop-dmca-%C2%A71202-and-attribution-standards-for-ai/.
+
+National Institute of Standards and Technology. Artificial Intelligence Risk Management Framework (AI RMF 1.0). NIST AI 100-1, Jan. 2023, nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf.
+
+Organisation for Economic Co-operation and Development. "Principle 1.3: Transparency and Explainability." Recommendation of the Council on Artificial Intelligence, OECD/LEGAL/0449, 22 May 2019, amended 3 May 2024, legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0449.
+
+European Parliament and Council of the European Union. "Article 53: Obligations for Providers of General-Purpose AI Models." Regulation (EU) 2024/1689 of 13 June 2024 Laying Down Harmonised Rules on Artificial Intelligence (Artificial Intelligence Act), Official Journal of the European Union, L series, 12 July 2024, eur-lex.europa.eu/eli/reg/2024/1689/oj.
+ 
+Piktus, Aleksandra, et al. "The ROOTS Search Tool: Data Transparency for LLMs." arXiv, 2023, arxiv.org/abs/2302.14035.
+
+BigScience Workshop. "BLOOM: A 176B-Parameter Open-Access Multilingual Language Model." arXiv, 2022, arxiv.org/abs/2211.05100.
 
 ## Justice Gap in Influence-Based Attention
 
@@ -245,14 +256,40 @@ Understanding this limitation opens the door to constructive improvement — bot
     Legal or ethical frameworks may need to **decouple credit from output matching**. Influence can be acknowledged based on inclusion, stylistic absorption, or participation in a known source corpus, even if no single sentence dominates the outcome.
 
 * **Open Audit Tools for Institutions**
-    With adequate collaboration between regulatory bodies, research universities, and supercomputing centers, it’s possible to develop shared infrastructures for tracing influence in models. These don’t need to be commercial tools — they can be **open-source, public-interest systems**, built to support transparency, policy evaluation, and legal due diligence. 
+    With adequate collaboration between regulatory bodies, research universities, and supercomputing centers, it’s possible to develop shared infrastructures for tracing influence in models. These don’t need to be commercial tools — they can be **open-source, public-interest systems**, built to support transparency, policy evaluation, and legal due diligence. ROOTS Search Tool and BLOOM is a success case of such collaboration 
 
-* **Platform Precedents and Policy Crossovers** <--double-check citations-->  
-    These questions are not new. Scholars like **Tarleton Gillespie** (on platform governance), **Safiya Noble** (on algorithmic bias), and **José van Dijck** (on datafication and visibility) have long argued that centralized platforms systematically obscure the labor and creativity of smaller actors. **The 2018 shift in YouTube’s monetization policy** — where only creators with 1,000+ subscribers and 4,000+ watch hours could earn ad revenue — offers a clear analogy: a threshold designed for manageability, but one that systematically excluded smaller voices from visibility and credit.
+* **Platform Precedents and Policy Crossovers**
+    These questions are not new. Scholars of platform governance (Tarleton Gillespie), algorithmic bias (Safiya Noble), and datafication (José van Dijck) have argued in different ways that the technical and commercial arrangements of centralized platforms shape whose content becomes visible and valued, while presenting those arrangements as neutral. A concrete precedent: in January 2018, YouTube restricted ad revenue to channels with at least 1,000 subscribers and 4,000 watch hours in the prior twelve months, replacing a much lower lifetime-views threshold. YouTube framed the change as protection against spammers and bad actors — a threshold designed for manageability — but it also removed the smallest creators from the earning pool entirely. (The threshold has since changed; the 2018 numbers are a time-stamped example of a durable pattern.)
 
-    As activists from the **YouTube Creators Union and others have pointed out, this doesn’t just affect earnings — it affects **which contributions are acknowledged as legitimate**. If we build our language models on similarly skewed visibility, we risk reproducing the same injustice. 
-
+    Creator organizing followed. The YouTubers Union, founded in 2018, and its later FairTube campaign with the German trade union IG Metall demanded that platforms publish the criteria affecting monetization and discovery and explain individual decisions. Their complaint was not only about earnings but about legitimacy: which contributions count, judged by criteria no one outside the platform can inspect. If language models are built on similarly skewed visibility, the same asymmetry is reproduced — this time inside the training data itself.
+ 
 * **In addition to Model Influence Evaluation**
     In parallel, other technologies may help creators assert and protect rights. **Fingerprinting, watermarking, and semantic detection tools** can help identify when a model output closely mimics a known work. **Provenance and dataset documentation standards** aim to make training data more transparent and auditable. Meanwhile, **blockchain timestamping, protective licensing,** and **content authenticity metadata** offer new ways to assert originality and preferred usage. While none of these tools solve the problem of quantifying model influence, they form a **complementary ecosystem** of safeguards — especially valuable when combined with policy or institutional support.
 
-The goal of these efforts is not to freeze innovation, but to **recognize invisible labor**, restore proportional credit, and support fairer systems of cultural and intellectual attribution. This path is challenging, but not impossible. The tools exist. What’s needed is **collaboration, shared language, and a commitment to making the invisible visible** - especially from those engaged in interpreting intellectual property law, shaping future legal standards, or contributing original works to the cultural and creative commons.   
+The goal of these efforts is not to freeze innovation, but to **recognize invisible labor**, restore proportional credit, and support fairer systems of cultural and intellectual attribution. This path is challenging, but not impossible. The tools exist. What’s needed is **collaboration, shared language, and a commitment to making the invisible visible** - especially from those engaged in interpreting intellectual property law, shaping future legal standards, or contributing original works to the cultural and creative commons. 
+
+#### References — Possible Paths Forward
+
+Coalition for Content Provenance and Authenticity. "C2PA Technical Specification." C2PA, c2pa.org/specifications/.
+
+Deng, Junwei, and Jiaqi Ma. "Computational Copyright: Towards a Royalty Model for Music Generative AI." arXiv, 2023, arxiv.org/abs/2312.06646.
+
+Dathathri, Sumanth, et al. "Scalable Watermarking for Identifying Large Language Model Outputs." Nature, vol. 634, 2024, pp. 818–23.
+
+Gebru, Timnit, et al. "Datasheets for Datasets." Communications of the ACM, vol. 64, no. 12, 2021, pp. 86–92.
+
+Gillespie, Tarleton. Custodians of the Internet: Platforms, Content Moderation, and the Hidden Decisions That Shape Social Media. Yale UP, 2018.
+
+Mohan, Neal, and Robert Kyncl. "Additional Changes to the YouTube Partner Program (YPP) to Better Protect Creators." YouTube Official Blog, 16 Jan. 2018, blog.youtube/news-and-events/additional-changes-to-youtube-partner/.
+
+Noble, Safiya Umoja. Algorithms of Oppression: How Search Engines Reinforce Racism. New York UP, 2018.
+
+"Notes from a Recent Authors Alliance Workshop: DMCA §1202 and Attribution Standards for AI." Authors Alliance, 19 Feb. 2026, www.authorsalliance.org/2026/02/19/notes-from-a-recent-authors-alliance-workshop-dmca-%C2%A71202-and-attribution-standards-for-ai/.
+
+Piktus, Aleksandra, et al. "The ROOTS Search Tool: Data Transparency for LLMs." arXiv, 2023, arxiv.org/abs/2302.14035.
+
+Shan, Shawn, et al. "Glaze: Protecting Artists from Style Mimicry by Text-to-Image Models." Proceedings of the 32nd USENIX Security Symposium, 2023, pp. 2187–204.
+
+van Dijck, José. "Datafication, Dataism and Dataveillance: Big Data between Scientific Paradigm and Ideology." Surveillance & Society, vol. 12, no. 2, 2014, pp. 197–208.
+
+Whittaker, Zack. "YouTubers Want to Unionize, and They've Got the Support of IG Metall." CNBC, 6 Aug. 2019, www.cnbc.com/2019/08/06/youtubers-want-to-unionize-and-theyve-got-the-support-of-ig-metall.html.  
