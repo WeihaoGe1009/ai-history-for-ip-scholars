@@ -32,32 +32,61 @@ This module introduces generative models, the foundation behind most "AI" produc
 ChatGPT by OpenAI, [2026], using the prompt: "generate a png image of a cat"
 
 Shakespeare's Sonnets [Folger Shakespear Library](https://www.folger.edu/explore/shakespeares-works/shakespeares-sonnets/)
+
 License: Public Domain
 
 U.S. Constitution [U.S. National Archives - The Constitution of the United States: A Transcription](https://www.archives.gov/founding-docs/constitution-transcript)
+
 License: Public Domain
 
 U.S. Bill of Rights [U.S. National Archives - The Bill of Rights: A Transcription](https://www.archives.gov/founding-docs/bill-of-rights-transcript)
+
 License: Public Domain
 
 STL10 DataSet
+
 License: built-in data from open-source package
 
-> modify this later - 4 style images, name and "License: Public domain"
+4 style images
+
+> Christ and the Apostles
+> Under the Wave off Kanagawa (The Great Wave)
+> Composition 8
+> Starry Night 
+
+License: Public domain
 
 ## References
 
+
+
 ### section 4
-**Visual art** Andersen et al. v. Stability AI Ltd. et al. No. 3:23-cv-00201-WHO, United States District Court, Northern District of California, filed 13 Jan. 2023. CourtListener, www.courtlistener.com/docket/66732129/andersen-v-stability-ai-ltd/.
+* **Visual art** Andersen et al. v. Stability AI Ltd. et al. No. 3:23-cv-00201-WHO, United States District Court, Northern District of California, filed 13 Jan. 2023. CourtListener, www.courtlistener.com/docket/66732129/andersen-v-stability-ai-ltd/.
 
-**Music** Ogletree, T. Chase. "Never Going Out of Style: How AI-Generated Music's Reliance on Style-Based Prompts Calls for a Reminder that No One Can Copyright a Musical Genre." Entertainment and Sports Lawyer, American Bar Association Forum on the Entertainment and Sports Industries, Fall 2025, www.americanbar.org/groups/entertainment\_sports/resources/entertainment-sports-lawyer/2025-fall/never-going-style-ai-generated-music-reliance-style-based-prompts-copyright-musical-genre/.
+* **Music** Ogletree, T. Chase. "Never Going Out of Style: How AI-Generated Music's Reliance on Style-Based Prompts Calls for a Reminder that No One Can Copyright a Musical Genre." Entertainment and Sports Lawyer, American Bar Association Forum on the Entertainment and Sports Industries, Fall 2025, www.americanbar.org/groups/entertainment\_sports/resources/entertainment-sports-lawyer/2025-fall/never-going-style-ai-generated-music-reliance-style-based-prompts-copyright-musical-genre/.
 
-**Fashion** Niyompatama, Mark Jetsaphon, and Ioanna Lapatoura. "Generative AI in Fashion Design Creation: A Copyright Analysis of AI-Assisted Designs." Journal of Intellectual Property Law & Practice, vol. 20, no. 10, Oct. 2025, pp. 654–666, doi.org/10.1093/jiplp/jpaf045.
+* **Fashion** Niyompatama, Mark Jetsaphon, and Ioanna Lapatoura. "Generative AI in Fashion Design Creation: A Copyright Analysis of AI-Assisted Designs." Journal of Intellectual Property Law & Practice, vol. 20, no. 10, Oct. 2025, pp. 654–666, doi.org/10.1093/jiplp/jpaf045.
 
-Hokusai, K. (c. 1830–1832). Under the Wave off Kanagawa [Woodblock print]. Wikimedia Commons. wikimedia.org
+* Christ and the Apostles. Ca. 543–554, triumphal arch mosaic, Euphrasian
+Basilica, Poreč, Croatia. *Wikimedia Commons*,
+commons.wikimedia.org/wiki/File:Jesus\_with\_apostels.JPG.
+Accessed 26 April 2026.
 
+* Hokusai, Katsushika. *Under the Wave off Kanagawa (The Great Wave)*.
+Ca. 1831, British Museum, London. *Wikimedia Commons*,
+commons.wikimedia.org/wiki/File:The\_Great\_Wave\_off\_Kanagawa\_in\_the\_British\_Museum.jpg.
+Accessed 26 April 2026.
 
+* Kandinsky, Wassily. *Composition 8*. 1923, Solomon R. Guggenheim Museum,
+New York. *Wikimedia Commons*,
+commons.wikimedia.org/wiki/File:Kandinsky_-_Composition_8,_1923.jpg.
+Accessed 26 April 2026.
 
-**STL10 data set**
+* Van Gogh, Vincent. *The Starry Night*. 1889, Museum of Modern Art,
+New York. *Wikimedia Commons*,
+commons.wikimedia.org/wiki/File:Van\_Gog\_-\_Starry\_Night\_-\_Google\_Art\_Project.jpg.
+Accessed 26 April 2026.
 
-**TorchVision**
+* **STL-10 Dataset** Adam Coates, Honglak Lee, Andrew Y. Ng An Analysis of Single Layer Networks in Unsupervised Feature Learning AISTATS, 2011. http://cs.stanford.edu/~acoates/stl10
+
+* **pyTorch** Paszke, A., Gross, S., Massa, F., Lerer, A., Bradbury, J., Chanan, G., ... & Chintala, S. (2019). Pytorch: An imperative style, high-performance deep learning library. Advances in neural information processing systems, 32.
