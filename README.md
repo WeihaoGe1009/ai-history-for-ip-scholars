@@ -70,7 +70,7 @@ In this table, i should add references.
 | `04`   |  *Autoencoders*                                      | Compression and reconstruction              | 2000s–2010s | Early unsupervised representation learning; led to pretraining ideas            |
 |`05`   |  *Large Language Models (LLMs)*                      | Deep context prediction via attention       | 2017–Now    | Scaled transformer-based generation; foundational for modern generative AI      |
 | `06`   | 🎨 *Diffusion Models*                                  | Generating images from noise                | 2021–Now    | Probabilistic generative models; stylized creation rather than reproduction     |
-| `07`   | 🤔 *Chain-of-Thought and Reflection*                   | Reasoning, verification, and self-checking  | 2023+       | Structural techniques for alignment, safety, and transparent decision-making    |
+| `07`   | 🤔 *After ChatGPT*                   | Reasoning, verification, and self-checking  | 2023+       | Structural techniques for alignment, safety, and transparent decision-making    |
 
 
 ## References
