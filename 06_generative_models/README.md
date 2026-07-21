@@ -4,6 +4,7 @@ This module introduces generative models, the foundation behind most "AI" produc
 ---
 ## What's Inside
 - `06_generative_models.ipynb` - The interactive Google Colab notebook ([Run on Google Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/06_generative_models/06_generative_models.ipynb))
+- `optional_reading_tech_law_society.md` - The optional reading document listing 6 themes to think about: 1. authorship and creativity, 2. training data as a legal object, 3. accountability, when the model itself is a "black box", 4. model distillation controversies, 5. synthetic media and epistemic integrity, and 6. regulatory difficulties.
 - `data/` - Contains input data for the demos. Including:
   - `02_diffusion_model/`- Contains an AI-generated cat image as a "shortcut" for demo purpose (ChatGPT, 2026)
   - `03_feedback/` - Contains the same `labeled_sentences.csv` as the one in module 1
