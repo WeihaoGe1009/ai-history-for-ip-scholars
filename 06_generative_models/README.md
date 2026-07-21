@@ -142,6 +142,7 @@ https://www.americanbar.org/groups/entertainment_sports/resources/entertainment-
 
 * **Fashion** Niyompatama, Mark Jetsaphon, and Ioanna Lapatoura. "Generative AI in Fashion Design Creation: A Copyright Analysis of AI-Assisted Designs." Journal of Intellectual Property Law & Practice, vol. 20, no. 10, Oct. 2025, pp. 654–666, doi.org/10.1093/jiplp/jpaf045.
 
+* **VGG-19** Simonyan, Karen, and Andrew Zisserman. "Very deep convolutional networks for large-scale image recognition." arXiv preprint arXiv:1409.1556 (2014).
 
 * **style reference images** Christ and the Apostles. Ca. 543–554, triumphal arch mosaic, Euphrasian
 Basilica, Poreč, Croatia. *Wikimedia Commons*,
