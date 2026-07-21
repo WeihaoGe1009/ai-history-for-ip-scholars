@@ -57,7 +57,7 @@ To help IP scholars and students:
 ### Module 6 - Generative Models - the foundation behind modern "AI" products.
 * briefly demonstrate how generative model "generates" outputs from random noise, how to "prompt" a model, how would a model collapse, and how the output "follows" a style. [Open in Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/06_generative_models/06_generative_models.ipynb)
 * optional reading introducing other content-creating models that are not genAI. [View on GitHub](https://github.com/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/06_generative_models/optional_reading_before_generative_AI.md)
-* optional reading providing open discussion topics. [View on Github](https://github.com/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/optional_reading_tech_law_society.md) 
+* optional reading providing open discussion topics. [View on Github](https://github.com/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/06_generative_models/optional_reading_tech_law_society.md) 
 
 Each module includes:
 - 📖 Brief history and model explanation
