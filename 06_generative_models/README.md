@@ -121,7 +121,7 @@ Training of a Small Language Model." *arXiv*, 2025,arxiv.org/abs/2502.02737.
 
 * **Prompt engineering** Liu, Pengfei, et al. "Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing." *ACM Computing Surveys*, vol. 55, no. 9, 2023, pp. 1–35.
 
-* **Google prompting guide 101** Google. *Prompting Guide 101: A Quick-Start Handbook for Effective Prompts*. Google Workspace, 2024,https://services.google.com/fh/files/misc/gemini\_for\_workspace\_prompt\_guide\_october\_2024\_digital\_final.pdf
+* **Google prompting guide 101** Google. *Prompting Guide 101: A Quick-Start Handbook for Effective Prompts*. Google Workspace, 2024, https://services.google.com/fh/files/misc/gemini_for_workspace_prompt_guide_october_2024_digital_final.pdf
 
 * **model collapse** Polanyi, M. (1958). Personal Knowledge. University of Chicago Press. 
 
@@ -137,7 +137,8 @@ Training of a Small Language Model." *arXiv*, 2025,arxiv.org/abs/2502.02737.
 
 * **Visual art** Andersen et al. v. Stability AI Ltd. et al. No. 3:23-cv-00201-WHO, United States District Court, Northern District of California, filed 13 Jan. 2023. CourtListener, www.courtlistener.com/docket/66732129/andersen-v-stability-ai-ltd/.
 
-* **Music** Ogletree, T. Chase. "Never Going Out of Style: How AI-Generated Music's Reliance on Style-Based Prompts Calls for a Reminder that No One Can Copyright a Musical Genre." Entertainment and Sports Lawyer, American Bar Association Forum on the Entertainment and Sports Industries, Fall 2025, www.americanbar.org/groups/entertainment\_sports/resources/entertainment-sports-lawyer/2025-fall/never-going-style-ai-generated-music-reliance-style-based-prompts-copyright-musical-genre/.
+* **Music** Ogletree, T. Chase. "Never Going Out of Style: How AI-Generated Music's Reliance on Style-Based Prompts Calls for a Reminder that No One Can Copyright a Musical Genre." Entertainment and Sports Lawyer, American Bar Association Forum on the Entertainment and Sports Industries, Fall 2025, 
+https://www.americanbar.org/groups/entertainment_sports/resources/entertainment-sports-lawyer/2025-fall/never-going-style-ai-generated-music-reliance-style-based-prompts-copyright-musical-genre/
 
 * **Fashion** Niyompatama, Mark Jetsaphon, and Ioanna Lapatoura. "Generative AI in Fashion Design Creation: A Copyright Analysis of AI-Assisted Designs." Journal of Intellectual Property Law & Practice, vol. 20, no. 10, Oct. 2025, pp. 654–666, doi.org/10.1093/jiplp/jpaf045.
 
