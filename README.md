@@ -50,10 +50,14 @@ To help IP scholars and students:
 ### Module 4 - Autoencoders & Compression - A Responsible Perspective
 * Explore how autoencoders learn patterns from images, and its applications in data compression and image denoising. [Open in Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/04_autoencoders/04_autoencoder.ipynb) 
 
-### Module 5 - Large Language Models — How Models Use Context, and What Their Training Data Contributes
-* Briefly analyze how modern language models utilize "context" in a text. Additionally, we evaluate the influence of each sample in the training data set on a model in a very simple case. [Open in Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/05_llms/05_llms.ipynb)
-* optional reading on more in-depth discussion on tracing influence of the training data in the large language models. [View on Github](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/05_llms/optional_reading_training_data_influence.md)    
+### Module 5 - Language Models — How Models Use Context, and What Their Training Data Contributes
+* Briefly analyze how modern language models utilize "context" in a text. Additionally, we evaluate the influence of each sample in the training data set on a model in a very simple case. [Open in Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/05_language_models/05_language_models.ipynb)
+* optional reading on more in-depth discussion on tracing influence of the training data in the large language models. [View on Github](https://github.com/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/05_language_models/optional_reading_training_data_influence.md)
 
+### Module 6 - Generative Models - the foundation behind modern "AI" products.
+* briefly demonstrate how generative model "generates" outputs from random noise, how to "prompt" a model, how would a model collapse, and how the output "follows" a style. [Open in Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/06_generative_models/06_generative_models.ipynb)
+* optional reading introducing other content-creating models that are not genAI. [View on GitHub](https://github.com/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/06_generative_models/optional_reading_before_generative_AI.md)
+* optional reading providing open discussion topics. [View on Github](https://github.com/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/optional_reading_tech_law_society.md) 
 
 Each module includes:
 - 📖 Brief history and model explanation
@@ -68,8 +72,8 @@ In this table, i should add references.
 | `02`   |  *Neural Network: Perception, Pattern, and Prototype*                             | pattern learning and image generation           | 1980s–2000s | Overcame linear limits; enabled deeper pattern learning with hidden layers      |
 | `03`   |  *Markov Chain: Language, Probability, and Illusion* | Frequency-based content generation | 1960s–2000s | Sequence modeling using statistics, including early text and music generation   |
 | `04`   |  *Autoencoders*                                      | Compression and reconstruction              | 2000s–2010s | Early unsupervised representation learning; led to pretraining ideas            |
-|`05`   |  *Large Language Models (LLMs)*                      | Deep context prediction via attention       | 2017–Now    | Scaled transformer-based generation; foundational for modern generative AI      |
-| `06`   | 🎨 *Diffusion Models*                                  | Generating images from noise                | 2021–Now    | Probabilistic generative models; stylized creation rather than reproduction     |
+|`05`   |  *Language Models*                      | Deep context prediction via attention       | 2017–Now    | Scaled transformer-based generation; foundational for modern generative AI      |
+| `06`   | 🎨 *Generative Models*                                  | Generating images from noise                | 2021–Now    | Probabilistic generative models; stylize mimicry     |
 | `07`   | 🤔 *After ChatGPT*                   | Reasoning, verification, and self-checking  | 2023+       | Structural techniques for alignment, safety, and transparent decision-making    |
 
 
