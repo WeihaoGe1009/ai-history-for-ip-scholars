@@ -4,9 +4,9 @@ In previous modules, we explored models that made decisions based on simple word
 
 
 ## What's Inside
-* `05_llms.ipynb` - The interactive Google Colab notebook ([Run on Google Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/05_llms/05_llms.ipynb))
-* `optional_reading_before_generative_AI.md`([open](https://github.com/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/05_llms/optional_reading_before_generative_AI.md)) - The optional reading document introducing "procedural generators", the older creation tools that are different from Generative AIs. 
-* `optional_reading_training_data_influence.md`([open](https://github.com/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/05_llms/optional_reading_training_data_influence.md)) - The optional reading document discussing tracing how the data used to train the models would influence the models.
+* `05_language_models.ipynb` - The interactive Google Colab notebook ([Run on Google Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/05_language_models/05_language_models.ipynb))
+* `optional_reading_before_generative_AI.md`([open](https://github.com/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/05_language_models/optional_reading_before_generative_AI.md)) - The optional reading document introducing "procedural generators", the older creation tools that are different from Generative AIs. 
+* `optional_reading_training_data_influence.md`([open](https://github.com/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/05_language_models/optional_reading_training_data_influence.md)) - The optional reading document discussing tracing how the data used to train the models would influence the models.
 * `data/` - contains the subset from the SST2 data set for sentiment analysis 
 * `scripts/` - contains the script that curates the data 
 
@@ -45,4 +45,4 @@ https://huggingface.co/datasets/glue/viewer/sst2
 * **SBERT (Sentence-BERT)** Reimers, Nils, and Iryna Gurevych. "Sentence-bert: Sentence embeddings using siamese bert-networks." Proceedings of the 2019 conference on empirical methods in natural language processing and the 9th international joint conference on natural language processing (EMNLP-IJCNLP). 2019. 
 * **SST-2 (Stanford Sentiment Treebank)** Socher, Richard, et al. "Recursive Deep Models for Semantic Compositionality over a Sentiment Treebank." Proceedings of the 2013 Conference on Empirical Methods in Natural Language Processing, Association for Computational Linguistics, 2013, pp. 1631–42. 
 * **Transformer** Vaswani, Ashish, et al. "Attention is all you need." Advances in neural information processing systems 30 (2017).
-* For full citations related to influence tracing, please see the optional reading materials [optional 1 - beyond generative AI](https://github.com/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/05_llms/optional_reading_beyond_generative_AI.md), [optional 2 - training data attribution](https://github.com/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/05_llms/optional_reading_training_data_influence.md)  
+* For full citations related to influence tracing, please see the optional reading materials [optional 1 - beyond generative AI](https://github.com/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/05_language_models/optional_reading_beyond_generative_AI.md), [optional 2 - training data attribution](https://github.com/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/05_language_models/optional_reading_training_data_influence.md)  
