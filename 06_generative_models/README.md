@@ -113,33 +113,27 @@ openai.com/index/introducing-4o-image-generation/.
 Bengio, Yoshua, et al. "A Neural Probabilistic Language Model."
 *Journal of Machine Learning Research*, vol. 3, 2003, pp. 1137–55.
 
-**SmolLM2-360M-Instruct model**
-
-* "SmolLM2-360M-Instruct." *Hugging Face*, HuggingFaceTB,
+* **SmolLM2-360M-Instruct model** "SmolLM2-360M-Instruct." *Hugging Face*, HuggingFaceTB,
 huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct. Accessed July,06,2026. 
 
-* Ben Allal, Loubna, et al. "SmolLM2: When Smol Goes Big — Data-Centric
+* **SmolLM2-360M-Instruct model** Ben Allal, Loubna, et al. "SmolLM2: When Smol Goes Big — Data-Centric
 Training of a Small Language Model." *arXiv*, 2025,arxiv.org/abs/2502.02737.
 
 * **Prompt engineering** Liu, Pengfei, et al. "Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing." *ACM Computing Surveys*, vol. 55, no. 9, 2023, pp. 1–35.
 
 * **Google prompting guide 101** Google. *Prompting Guide 101: A Quick-Start Handbook for Effective Prompts*. Google Workspace, 2024,https://services.google.com/fh/files/misc/gemini\_for\_workspace\_prompt\_guide\_october\_2024\_digital\_final.pdf
 
-**model collapse - impact of entry-level hiring disruption** 
+* **model collapse** Polanyi, M. (1958). Personal Knowledge. University of Chicago Press. 
 
-* Polanyi, M. (1958). Personal Knowledge. University of Chicago Press. 
+* **model collapse** Nonaka, I., & Takeuchi, H. (1995). The Knowledge Creating Company. Oxford University Press. 
 
-* Nonaka, I., & Takeuchi, H. (1995). The Knowledge Creating Company. Oxford University Press. 
+* **model collapse** Davenport, T. H., & Prusak, L. (1998). Working Knowledge. Harvard Business School Press. 
 
-* Davenport, T. H., & Prusak, L. (1998). Working Knowledge. Harvard Business School Press. 
+* **model collapse** SignalFire. (2025). State of Tech Talent 2025. 
 
-* SignalFire. (2025). State of Tech Talent 2025. 
+* **model collapse** Rezi.ai. (2026). The Crisis of Entry-Level Labor in the Age of AI.
 
-* Rezi.ai. (2026). The Crisis of Entry-Level Labor in the Age of AI.
-
-**model collapse - synthetic training data** 
-
-* Shumailov, I., et al. (2024). "AI Models Collapse When Trained on Recursively Generated Data." Nature, 631(8022), 755–759.  
+* **model collapse** Shumailov, I., et al. (2024). "AI Models Collapse When Trained on Recursively Generated Data." Nature, 631(8022), 755–759.  
 
 * **Visual art** Andersen et al. v. Stability AI Ltd. et al. No. 3:23-cv-00201-WHO, United States District Court, Northern District of California, filed 13 Jan. 2023. CourtListener, www.courtlistener.com/docket/66732129/andersen-v-stability-ai-ltd/.
 
@@ -147,24 +141,23 @@ Training of a Small Language Model." *arXiv*, 2025,arxiv.org/abs/2502.02737.
 
 * **Fashion** Niyompatama, Mark Jetsaphon, and Ioanna Lapatoura. "Generative AI in Fashion Design Creation: A Copyright Analysis of AI-Assisted Designs." Journal of Intellectual Property Law & Practice, vol. 20, no. 10, Oct. 2025, pp. 654–666, doi.org/10.1093/jiplp/jpaf045.
 
-**style reference images**
 
-* Christ and the Apostles. Ca. 543–554, triumphal arch mosaic, Euphrasian
+* **style reference images** Christ and the Apostles. Ca. 543–554, triumphal arch mosaic, Euphrasian
 Basilica, Poreč, Croatia. *Wikimedia Commons*,
 commons.wikimedia.org/wiki/File:Jesus\_with\_apostels.JPG.
 Accessed 26 April 2026.
 
-* Hokusai, Katsushika. *Under the Wave off Kanagawa (The Great Wave)*.
+* **style reference images** Hokusai, Katsushika. *Under the Wave off Kanagawa (The Great Wave)*.
 Ca. 1831, British Museum, London. *Wikimedia Commons*,
 commons.wikimedia.org/wiki/File:The\_Great\_Wave\_off\_Kanagawa\_in\_the\_British\_Museum.jpg.
 Accessed 26 April 2026.
 
-* Kandinsky, Wassily. *Composition 8*. 1923, Solomon R. Guggenheim Museum,
+* **style reference images** Kandinsky, Wassily. *Composition 8*. 1923, Solomon R. Guggenheim Museum,
 New York. *Wikimedia Commons*,
 commons.wikimedia.org/wiki/File:Kandinsky_-_Composition_8,_1923.jpg.
 Accessed 26 April 2026.
 
-* Van Gogh, Vincent. *The Starry Night*. 1889, Museum of Modern Art,
+* **style reference images** Van Gogh, Vincent. *The Starry Night*. 1889, Museum of Modern Art,
 New York. *Wikimedia Commons*,
 commons.wikimedia.org/wiki/File:Van\_Gog\_-\_Starry\_Night\_-\_Google\_Art\_Project.jpg.
 Accessed 26 April 2026.
