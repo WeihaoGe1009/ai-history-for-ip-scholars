@@ -10,6 +10,8 @@ containing:
 > * what can be the impact of AI-output quality as well as job market, if AI-output overflows
 > * how does AI mimick styles
 
+- `optional_reading_before_generative_AI.md`([open](https://github.com/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/06_generative_models/optional_reading_before_generative_AI.md)) - The optional reading document introducing "procedural generators", the older creation tools that are different from Generative AIs.
+
 - `optional_reading_tech_law_society.md`([open](https://github.com/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/06_generative_models/optional_reading_tech_law_society.md)) - The optional reading document listing 6 sample themes open to discussion: 
 > 1. authorship and creativity 
 > 2. training data as a legal object 
