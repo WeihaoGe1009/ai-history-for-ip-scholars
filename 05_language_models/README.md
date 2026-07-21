@@ -5,7 +5,6 @@ In previous modules, we explored models that made decisions based on simple word
 
 ## What's Inside
 * `05_language_models.ipynb` - The interactive Google Colab notebook ([Run on Google Colab](https://colab.research.google.com/github/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/05_language_models/05_language_models.ipynb))
-* `optional_reading_before_generative_AI.md`([open](https://github.com/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/05_language_models/optional_reading_before_generative_AI.md)) - The optional reading document introducing "procedural generators", the older creation tools that are different from Generative AIs. 
 * `optional_reading_training_data_influence.md`([open](https://github.com/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/05_language_models/optional_reading_training_data_influence.md)) - The optional reading document discussing tracing how the data used to train the models would influence the models.
 * `data/` - contains the subset from the SST2 data set for sentiment analysis 
 * `scripts/` - contains the script that curates the data 
