@@ -37,11 +37,12 @@ containing:
 * How do computers "learn" and transfer styles? 
 
 ## Take-Home Messages 
-* Modern generative models accept intent expressed in ordinary language and translate it into artifact — text, image, audio — without requiring the operator to possess any relevant skill. This is not simply an extension of what earlier models could do. It relocates who can produce creative and knowledge work, and under what conditions.
+* As we have seen in the previous parts, computers are able to convert signals into numbers, fit a model, and store the "patterns" numerically. With the stored patterns, not only can a computer reconstruct an image, a video, or a piece of text (like module 4 demoed), but it can also generate similar but "new" output out of noise in a recursive way. Diffusion models are one genre of models that can perform this task. 
+* Modern generative models adds a part to accept intent expressed in ordinary language and translate it into artifact, be it text, image, audio. It is like, some artifcat is created out of noise, steered by the user input. Therefore, the prompt-engineering emerges. 
+* This is not simply an extension of what earlier models could do. It relocates who can produce creative and knowledge work, and under what conditions.
 * Prompting is not a neutral act. The same model, directed differently, produces outputs that differ in register, intent, and implied purpose. Whether that direction constitutes creative authorship is a question courts are beginning to face.
-* Model collapse is not caused by bad data. Even clean, accurate training data degrades over generations when a model's own outputs re-enter the training pool — the model grows more confident while becoming less correct (Shumailov et al., Nature, 2024).
+* Model collapse is not caused by bad data. Even clean, accurate training data degrades over generations when a model's own outputs re-enter the training pool. As a result, the model grows more confident while becoming less correct (Shumailov et al., Nature, 2024).
 * Collapse also happens upstream. When automation displaces the entry-level workers through whom expertise is transmitted, the human signal available for training degrades before it reaches any pipeline.
-* Style is now extractable at machine scale. The legal premise that style-learning requires human skill and time — and therefore poses no competitive threat — no longer describes what these systems actually do.
 * Style can now be extracted from an author's body of work and reproduced on demand at machine scale. Unlike human style-learning, this requires no skill or time, posing a kind of competitive threat to originating artists that may warrant reexamination.
 
 ## Data
@@ -82,14 +83,71 @@ License: Public domain
 
 ## References
 
+* **Python VAE package**
+Chollet, François. "Variational AutoEncoder." *Keras*,
+keras.io/examples/generative/vae/. Accessed July 06, 2026.
 
+* **VAE**
+Kingma, Diederik P., and Max Welling. "Auto-Encoding Variational Bayes."
+*arXiv*, 2013, arxiv.org/abs/1312.6114.
 
-### section 4
+* **MNIST Dataset**
+LeCun, Yann, et al. "The MNIST Database of Handwritten Digits." 1998,
+yann.lecun.com/exdb/mnist/.
+
+* **Diffusion Model definition**
+Ho, Jonathan, et al. "Denoising Diffusion Probabilistic Models."
+*Advances in Neural Information Processing Systems*, vol. 33, 2020,
+pp. 6840–6851.
+
+* **Nano Banana**
+"Introducing Gemini 2.5 Flash Image, Our State-of-the-Art Image Model."
+*Google Developers Blog*, Google, 26 Aug. 2025,
+developers.googleblog.com/en/introducing-gemini-2-5-flash-image/.
+
+* **ChatGPT Images**
+"Introducing 4o Image Generation." *OpenAI*, 25 Mar. 2025,
+openai.com/index/introducing-4o-image-generation/.
+
+* **Autoregression**
+Bengio, Yoshua, et al. "A Neural Probabilistic Language Model."
+*Journal of Machine Learning Research*, vol. 3, 2003, pp. 1137–55.
+
+**SmolLM2-360M-Instruct model**
+
+* "SmolLM2-360M-Instruct." *Hugging Face*, HuggingFaceTB,
+huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct. Accessed July,06,2026. 
+
+* Ben Allal, Loubna, et al. "SmolLM2: When Smol Goes Big — Data-Centric
+Training of a Small Language Model." *arXiv*, 2025,arxiv.org/abs/2502.02737.
+
+* **Prompt engineering** Liu, Pengfei, et al. "Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing." *ACM Computing Surveys*, vol. 55, no. 9, 2023, pp. 1–35.
+
+* **Google prompting guide 101** Google. *Prompting Guide 101: A Quick-Start Handbook for Effective Prompts*. Google Workspace, 2024,https://services.google.com/fh/files/misc/gemini\_for\_workspace\_prompt\_guide\_october\_2024\_digital\_final.pdf
+
+**model collapse - impact of entry-level hiring disruption** 
+
+* Polanyi, M. (1958). Personal Knowledge. University of Chicago Press. 
+
+* Nonaka, I., & Takeuchi, H. (1995). The Knowledge Creating Company. Oxford University Press. 
+
+* Davenport, T. H., & Prusak, L. (1998). Working Knowledge. Harvard Business School Press. 
+
+* SignalFire. (2025). State of Tech Talent 2025. 
+
+* Rezi.ai. (2026). The Crisis of Entry-Level Labor in the Age of AI.
+
+**model collapse - synthetic training data** 
+
+* Shumailov, I., et al. (2024). "AI Models Collapse When Trained on Recursively Generated Data." Nature, 631(8022), 755–759.  
+
 * **Visual art** Andersen et al. v. Stability AI Ltd. et al. No. 3:23-cv-00201-WHO, United States District Court, Northern District of California, filed 13 Jan. 2023. CourtListener, www.courtlistener.com/docket/66732129/andersen-v-stability-ai-ltd/.
 
 * **Music** Ogletree, T. Chase. "Never Going Out of Style: How AI-Generated Music's Reliance on Style-Based Prompts Calls for a Reminder that No One Can Copyright a Musical Genre." Entertainment and Sports Lawyer, American Bar Association Forum on the Entertainment and Sports Industries, Fall 2025, www.americanbar.org/groups/entertainment\_sports/resources/entertainment-sports-lawyer/2025-fall/never-going-style-ai-generated-music-reliance-style-based-prompts-copyright-musical-genre/.
 
 * **Fashion** Niyompatama, Mark Jetsaphon, and Ioanna Lapatoura. "Generative AI in Fashion Design Creation: A Copyright Analysis of AI-Assisted Designs." Journal of Intellectual Property Law & Practice, vol. 20, no. 10, Oct. 2025, pp. 654–666, doi.org/10.1093/jiplp/jpaf045.
+
+**style reference images**
 
 * Christ and the Apostles. Ca. 543–554, triumphal arch mosaic, Euphrasian
 Basilica, Poreč, Croatia. *Wikimedia Commons*,
