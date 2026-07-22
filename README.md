@@ -1,11 +1,10 @@
-# A Guided Demo Series of AI for Intellectual Property (IP) Scholars
+# A Guided Demo Series of AI for Law Scholars
 
 ## Goals 
-To help IP scholars and students:
+To help Law scholars and students:
 * Understand the history of AI/ML models
 * Learn the basic principle of model learning and generation.
-* Facilitate drawing the subtle line between "learning" and "memorization"
-* Explore how creativity, authorship, plaigiarism, and other right infringement might happen
+* Explore how AI-related issues might raise 
 
 ## How to use this resource
 ### 1. requirements
@@ -31,10 +30,6 @@ To help IP scholars and students:
 
 
 ## Modules
-* provide a colab link explicitly with [Open in Colab]
-* add a description of each module
-**MODULEL LINKS will not work at this stage, but tested working with dummy repo**
-
 
 ### Module 1 - Classification: Perceptron, Logistic Regression, and Naive Bayes 
 * Explore how early models like the Perceptron, Logistic Regression, and Naive Bayes were used to classify text. This module uses Bag-of-Words to distinguish Shakespearean poetry from U.S. legal language.
@@ -59,13 +54,10 @@ To help IP scholars and students:
 * optional reading introducing other content-creating models that are not genAI. [View on GitHub](https://github.com/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/06_generative_models/optional_reading_before_generative_AI.md)
 * optional reading providing open discussion topics. [View on Github](https://github.com/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/06_generative_models/optional_reading_tech_law_society.md) 
 
-Each module includes:
-- 📖 Brief history and model explanation
-- 🧪 Interactive Colab demo
-- 🖼️ Visualizations and examples
+### optional: Module 7 - After ChatGPT - treading in the waves of AIs
+* a walkthrough of how to understand new concepts and the new model releases. [View on GitHub](https://github.com/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/07_after_chatgpt/07_after_chatgpt.md)
+  
 
-
-In this table, i should add references. 
 | Module | Title                                                  | Focus                                       | Era         | Historical Role                                                                 |
 | ------ | ------------------------------------------------------ | ------------------------------------------- | ----------- | ------------------------------------------------------------------------------- |
 | `01`   |  *Classification: Perceptron, Logistic Regression, and Naive-Bayes*                | linear, probabilistic, and rule-based classification using word frequencies                  | 1950s–1970s | First generation of ML models: Demonstrates how early AI systems used simple statistical rules and word patterns - without understanding meaning - to classify language. |
@@ -73,13 +65,12 @@ In this table, i should add references.
 | `03`   |  *Markov Chain: Language, Probability, and Illusion* | Frequency-based content generation | 1960s–2000s | Sequence modeling using statistics, including early text and music generation   |
 | `04`   |  *Autoencoders*                                      | Compression and reconstruction              | 2000s–2010s | Early unsupervised representation learning; led to pretraining ideas            |
 |`05`   |  *Language Models*                      | Deep context prediction via attention       | 2017–Now    | Scaled transformer-based generation; foundational for modern generative AI      |
-| `06`   | 🎨 *Generative Models*                                  | Generating images from noise                | 2021–Now    | Probabilistic generative models; stylize mimicry     |
-| `07`   | 🤔 *After ChatGPT*                   | Reasoning, verification, and self-checking  | 2023+       | Structural techniques for alignment, safety, and transparent decision-making    |
+| `06`   | *Generative Models*                                  | Generating images from noise                | 2021–Now    | Probabilistic generative models; stylize mimicry     |
+| `07`   | *After ChatGPT*                   | Following up the new, AI hallucination, and old issues in new era  | 2023+       | How to catch up with an explosion of AI products without getting exhausted    |
 
 
 ## References
 Each module includes links and references relevant to the models it covers.  
-A full set of historical and academic references will be added in a future update.
 
 ## Questions & Requests
 
