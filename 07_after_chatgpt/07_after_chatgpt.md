@@ -148,5 +148,4 @@ Section 2 showed one kind of opacity: no one, not even the builders, can fully e
 
 - **The recurring cost is easy to miss.** A subscription fee doesn't register as a pay cut or a price hike; it is a small, repeated charge that compounds quietly, especially where the tool becomes necessary for work but is not provided by an employer.
   - "Own Nothing, Rent Everything," *Sociable* — notes that many small recurring fees quietly compound, on top of ordinary inflation and stagnant wages.
-  - Michael Hudson, "Asset-Price Inflation and Rent Seeking" (also *Journal of Post-Keynesian Economics*) — argues that money diverted to pay for ongoing access leaves less for everyday spending, so people feel squeezed even when official inflation looks low.
-  - UK Office for National Statistics (FOI reply) — gives the official reasoning for why this kind of cost is left out of standard inflation measures.
+  - Michael Hudson, "Asset-Price Inflation and Rent Seeking" *Review of Keynesian Economics* — argues that money diverted to pay for ongoing access leaves less for everyday spending, so people feel squeezed even when official inflation looks low.
