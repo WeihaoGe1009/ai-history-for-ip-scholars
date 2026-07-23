@@ -10,41 +10,41 @@ AI hallucination — when a model generates confident, fluent text that is factu
 
 ### The knowledge gap: retrieval-augmented generation (2020)
 
-The first major hallucination-reduction technique, **Retrieval-Augmented Generation (RAG)**, was introduced by Lewis et al. at Facebook AI Research in 2020. The idea is straightforward: instead of forcing the model to answer from memory alone, the system first searches an external knowledge base — a document library, legal database, or the open web — and feeds the relevant passages to the model before it generates a response. Think of it as allowing a witness to consult actual case files rather than testifying from memory.
+The first major hallucination-reduction technique, **Retrieval-Augmented Generation (RAG)**, was introduced by Lewis et al. at Facebook AI Research in 2020 (Lewis et al.). The idea is straightforward: instead of forcing the model to answer from memory alone, the system first searches an external knowledge base — a document library, legal database, or the open web — and feeds the relevant passages to the model before it generates a response. Think of it as allowing a witness to consult actual case files rather than testifying from memory.
 
-RAG solved the **knowledge layer** of hallucination: models trained on static data inevitably lack information about events after their training cutoff, niche topics, and rapidly changing facts. A 2025 IEEE study found that RAG-based grounding reduces technical errors by approximately **75%** in specialized fields like engineering and medicine. Even as context windows have expanded to 200,000+ tokens, RAG remains essential because no window can hold all relevant knowledge, and RAG provides citable, verifiable sources — a critical feature for legal and regulatory settings.
+RAG solved the **knowledge layer** of hallucination: models trained on static data inevitably lack information about events after their training cutoff, niche topics, and rapidly changing facts. A study found that RAG-based grounding reduces technical errors significantly in specialized fields like engineering and medicine (Salahuddin Alawadhi and Noorhan Abbas, 2025). Even as context windows have expanded to 200,000+ tokens, RAG remains essential because no window can hold all relevant knowledge, and RAG provides citable, verifiable sources — a critical feature for legal and regulatory settings.
 
 ### Behavioral alignment: RLHF and its descendants (2022)
 
-In January 2022, OpenAI published the InstructGPT paper, introducing **Reinforcement Learning from Human Feedback (RLHF)**. The concept: after initial training, human evaluators rank the model's responses from best to worst. These rankings train a scoring system (a "reward model"), and the language model is further trained to produce outputs that score highly. When applied at scale in **ChatGPT** (November 2022), the results were dramatic — human raters preferred the small InstructGPT model over the vastly larger GPT-3 in most comparisons, and the model hallucinated less and produced less toxic content.
+In January 2022, OpenAI published the InstructGPT paper, introducing **Reinforcement Learning from Human Feedback (RLHF)** (Ouyang et al.). The concept: after initial training, human evaluators rank the model's responses from best to worst. These rankings train a scoring system (a "reward model"), and the language model is further trained to produce outputs that score highly. When applied at scale in **ChatGPT** (November 2022), the results were dramatic — human raters preferred the small InstructGPT model over the vastly larger GPT-3 in most comparisons, and the model hallucinated less and produced less toxic content.
 
-RLHF addresses the **behavioral alignment layer**. A model can have access to perfect knowledge (via RAG) but still present information misleadingly if its default behavior rewards fluency over truth. RLHF teaches the model the norms of honest communication. By 2025, an estimated **70% of enterprises** used RLHF or its derivatives for AI alignment. Its key successor, **Direct Preference Optimization (DPO)**, introduced by Stanford researchers in May 2023, achieves comparable alignment with far less computational cost — democratizing preference-based training for open-source projects and smaller organizations. DPO and its variants (KTO, IPO, ORPO) are now the dominant alignment methods for open-source models.
+RLHF addresses the **behavioral alignment layer**. A model can have access to perfect knowledge (via RAG) but still present information misleadingly if its default behavior rewards fluency over truth. RLHF teaches the model the norms of honest communication. By 2025, an estimated **70% of enterprises** used RLHF or its derivatives for AI alignment. Its key successor, **Direct Preference Optimization (DPO)**, introduced by Stanford researchers in May 2023 (Rafailov et al.), achieves comparable alignment with far less computational cost — democratizing preference-based training for open-source projects and smaller organizations. DPO and its variants (KTO, IPO, ORPO) are now the dominant alignment methods for open-source models.
 
-An important caveat for legal audiences: RLHF can create a subtler problem called **sycophancy** — models learn to produce confident, agreeable answers because humans prefer confidence, even when the correct response is "I don't know." This is why RLHF alone is insufficient.
+An important caveat for legal audiences: RLHF can create a subtler problem called **sycophancy** — models learn to produce confident, agreeable answers because humans prefer confidence, even when the correct response is "I don't know" (Sharma et al.). This is why RLHF alone is insufficient.
 
 ### Reasoning quality: chain-of-thought prompting (2022)
 
-Also in January 2022, Google researchers published the chain-of-thought (CoT) technique: instead of asking the model to jump to an answer, you instruct it to "think step by step." By articulating intermediate reasoning, the model reduces logical leaps and makes errors visible. On math benchmarks, CoT with a large model surpassed even fine-tuned GPT-3 with a separate verification system.
+Also in January 2022, Google researchers published the chain-of-thought (CoT) technique: instead of asking the model to jump to an answer, you instruct it to "think step by step" (Wei et al.). By articulating intermediate reasoning, the model reduces logical leaps and makes errors visible. On math benchmarks, CoT with a large model surpassed even fine-tuned GPT-3 with a separate verification system.
 
 CoT addresses the **reasoning layer**. Even a model with perfect knowledge and good behavioral alignment can produce wrong answers if it reasons poorly about what it knows — the equivalent of a well-intentioned analyst who makes a computational error. CoT remains free to use (no retraining needed) and universally applicable, which is why OpenAI's "o1" reasoning models (September 2024) essentially built CoT directly into the model's architecture. However, a June 2025 study found that while CoT reduces hallucination frequency, it can make remaining errors harder to detect automatically — a tradeoff with regulatory implications.
 
 ### Principled governance: Constitutional AI (December 2022)
 
-Anthropic introduced **Constitutional AI (CAI)** as an alternative to pure RLHF. Instead of relying on thousands of human raters whose collective preferences are opaque, CAI gives the model a written set of principles — a "constitution" — and trains the model to critique and revise its own responses against those principles. The constitution is a public document (Anthropic's draws from sources including the UN Declaration of Human Rights).
+Anthropic introduced **Constitutional AI (CAI)** as an alternative to pure RLHF (Bai et al.). Instead of relying on thousands of human raters whose collective preferences are opaque, CAI gives the model a written set of principles — a "constitution" — and trains the model to critique and revise its own responses against those principles. The constitution is a public document (Anthropic's draws from sources including the UN Declaration of Human Rights).
 
 CAI solves the **governance layer**: it makes AI values explicit and inspectable. For regulators, this is significant — you can audit the principles that guided the model's training, unlike RLHF where human preferences are statistically aggregated and impossible to individually inspect. In January 2026, Anthropic updated Claude's constitution with more nuanced guidelines, and variants like **Collective Constitutional AI** now incorporate public democratic input. CAI also solved a practical problem: RLHF models often became overly cautious ("I can't help with that"), while CAI models were simultaneously more helpful *and* more careful.
 
 ### Capability boundaries: tool use and grounding (2023)
 
-**Toolformer** (Meta AI, February 2023) and subsequent implementations like ChatGPT Plugins showed that models can learn to call external tools — calculators, search engines, databases, code interpreters — when they recognize their internal knowledge is insufficient. Before tool use, asking a model to multiply large numbers or report today's stock price would reliably produce hallucinations. With a calculator or search tool, these entire classes of error disappear.
+**Toolformer** (Meta AI, February 2023) and subsequent implementations like ChatGPT Plugins showed that models can learn to call external tools (Schick et al.) — calculators, search engines, databases, code interpreters — when they recognize their internal knowledge is insufficient. Before tool use, asking a model to multiply large numbers or report today's stock price would reliably produce hallucinations. With a calculator or search tool, these entire classes of error disappear.
 
-Tool use addresses the **capability boundary layer**: recognizing what the model fundamentally cannot do internally and outsourcing those tasks to reliable systems. This becomes even more critical as models are deployed in agentic workflows (discussed in Section 2), where autonomous multi-step operations require real-time factual grounding.
+Tool use addresses the **capability boundary layer**: recognizing what the model fundamentally cannot do internally and outsourcing those tasks to reliable systems. This becomes even more critical as models are deployed in agentic workflows, where autonomous multi-step operations require real-time factual grounding.
 
 ### Post-2023: reasoning models and a humbling discovery
 
-OpenAI's **o1 reasoning models** (September 2024) represented a paradigm shift — the model spends significant "thinking time" at inference, decomposing problems before responding. The o3-mini variant achieved a remarkably low **0.8% hallucination rate** on certain benchmarks. But a humbling finding followed: newer reasoning models (o3, o4-mini) showed *increased* hallucination on biographical questions, with o4-mini hallucinating **48%** of the time on PersonQA. A nonprofit lab, Transluce, found that o3 fabricated claims about actions it supposedly took (like claiming it ran code when it hadn't).
+OpenAI's **o1 reasoning models** (September 2024) represented a paradigm shift — the model spends significant "thinking time" at inference, decomposing problems before responding. The o3-mini variant achieved a remarkably low **0.8% hallucination rate** on certain benchmarks. But a humbling finding followed: newer reasoning models (o3, o4-mini) showed *increased* hallucination on biographical questions, with o4-mini hallucinating **48%** of the time on PersonQA. A nonprofit lab, Transluce, found that o3 fabricated claims about actions it supposedly took (like claiming it ran code when it hadn't) (Transluce).
 
-This counterintuitive result — that better reasoning can coexist with worse factual accuracy — confirms the layered defense thesis. **Reasoning capabilities and factual accuracy are distinct qualities**, and a model can improve at one while declining at the other. OpenAI's own 2025 theoretical paper by Kalai et al. argued that hallucination is a statistical inevitability of next-word prediction and will never reach zero. The practical response is calibration (models expressing uncertainty) and abstention (models declining to answer when unsure).
+This counterintuitive result — that better reasoning can coexist with worse factual accuracy — confirms the layered defense thesis. **Reasoning capabilities and factual accuracy are distinct qualities**, and a model can improve at one while declining at the other. OpenAI's own 2025 theoretical paper by Kalai et al. argued that hallucination is a statistical inevitability of next-word prediction and will never reach zero (Kalai et al.). The practical response is calibration (models expressing uncertainty) and abstention (models declining to answer when unsure).
 
 ### The layered defense model
 
@@ -68,23 +68,23 @@ Requiring "zero hallucination" is like requiring zero automotive accidents. The 
 
 A regular LLM call is like asking a librarian a single question and getting a single answer. An **AI agent** is like hiring a research assistant who can plan a multi-step strategy, use tools (web browsers, calculators, databases), make intermediate decisions, loop back to correct errors, and persist memory across sessions — all with minimal human oversight at each step.
 
-Technically, agents add four capabilities beyond a basic model call: **planning** (decomposing goals into subtasks), **tool use** (calling APIs, browsing the web, executing code), **memory** (maintaining state across steps and sessions), and **autonomy** (deciding what to do next without human approval at each step). They range from copilot agents that augment human decisions (like GitHub Copilot) to autopilot agents that act independently (like Devin for coding) to multi-agent systems where specialized agents collaborate on complex tasks.
+Technically, agents add four capabilities beyond a basic model call: **planning** (decomposing goals into subtasks), **tool use** (calling APIs, browsing the web, executing code), **memory** (maintaining state across steps and sessions), and **autonomy** (deciding what to do next without human approval at each step). They range from copilot agents that augment human decisions (like GitHub Copilot) (GitHub) to autopilot agents that act independently (like Devin for coding) (Cognition) to multi-agent systems where specialized agents collaborate on complex tasks.
 
 ### The agentic landscape in early 2026
 
-The global AI agents market reached approximately **$7.6–7.8 billion in 2025**, projected to exceed $10.9 billion in 2026. Gartner forecasts that **40% of enterprise applications** will embed task-specific AI agents by the end of 2026, up from less than 5% in 2025. However, only about 11% of organizations currently run agents in production, revealing a significant gap between experimentation and deployment.
+The global AI agents market reached approximately **$7.6–7.8 billion in 2025**, projected to exceed $10.9 billion in 2026 (Grand View Research). Gartner forecasts that **40% of enterprise applications** will embed task-specific AI agents by the end of 2026, up from less than 5% in 2025 (Gartner, "40% of Enterprise Apps"). However, only about 11% of organizations currently run agents in production, revealing a significant gap between experimentation and deployment.
 
-The technical infrastructure has matured rapidly. **Anthropic's Model Context Protocol (MCP)** — donated to the Linux Foundation in December 2025 — has become the de facto standard for how agents connect to external tools, with support from OpenAI, Google, and Microsoft. Google's **Agent-to-Agent (A2A) protocol** enables agents built on different frameworks to discover and collaborate with each other. The leading orchestration frameworks include **LangGraph** (graph-based workflows for complex stateful systems), **CrewAI** (role-based agent teams, claimed adoption by 60%+ of Fortune 500), and the **Microsoft Agent Framework** (merging AutoGen and Semantic Kernel, with enterprise-grade Azure integration). Gartner warns, however, that only about **130 of thousands** of claimed agentic AI vendors offer legitimate agent technology — "agent washing" is widespread.
+The technical infrastructure has matured rapidly. **Anthropic's Model Context Protocol (MCP)** — donated to the Linux Foundation in December 2025 — has become the de facto standard for how agents connect to external tools, with support from OpenAI, Google, and Microsoft (Anthropic). Google's **Agent-to-Agent (A2A) protocol** enables agents built on different frameworks to discover and collaborate with each other (Google). The leading orchestration frameworks include **LangGraph** (graph-based workflows for complex stateful systems), **CrewAI** (role-based agent teams, claimed adoption by 60%+ of Fortune 500) (CrewAI), and the **Microsoft Agent Framework** (merging AutoGen and Semantic Kernel, with enterprise-grade Azure integration). Gartner warns, however, that only about **130 of thousands** of claimed agentic AI vendors offer legitimate agent technology — "agent washing" is widespread (Gartner, "Over 40%").
 
 ### Where agents collide with intellectual property law
 
 The intersection of autonomous AI agents with IP law creates four distinct zones of legal ambiguity.
 
-**Autonomous content creation and ownership.** When an AI agent creates content without meaningful human creative control at each step, who owns the result? In the United States, this question is now effectively settled at the highest level. **Thaler v. Perlmutter** — where an inventor sought copyright for art autonomously generated by his AI system — was affirmed by the D.C. Circuit in March 2025, denied rehearing, and the **Supreme Court denied certiorari on March 2, 2026**. Human authorship is a "bedrock requirement" of copyright. The U.S. Copyright Office's Part 2 guidance (January 2025) further clarified that **prompts alone do not provide sufficient control** to make users the authors of AI output. However, human-authored elements perceptible in AI-assisted output remain protectable, and creative selection, coordination, or modification of AI material can be copyrightable on a case-by-case basis. Internationally, China's Beijing Internet Court has taken a more permissive stance (recognizing copyright for AI-generated images reflecting human intellectual effort), while Japan remains the most permissive jurisdiction for AI training on copyrighted works.
+**Autonomous content creation and ownership.** When an AI agent creates content without meaningful human creative control at each step, who owns the result? In the United States, this question is now effectively settled at the highest level. **Thaler v. Perlmutter** — where an inventor sought copyright for art autonomously generated by his AI system — was affirmed by the D.C. Circuit in March 2025, denied rehearing, and the **Supreme Court denied certiorari on March 2, 2026**. Human authorship is a "bedrock requirement" of copyright. The U.S. Copyright Office's Part 2 guidance (January 2025) further clarified that **prompts alone do not provide sufficient control** to make users the authors of AI output (United States Copyright Office). However, human-authored elements perceptible in AI-assisted output remain protectable, and creative selection, coordination, or modification of AI material can be copyrightable on a case-by-case basis. Internationally, China's Beijing Internet Court has taken a more permissive stance (recognizing copyright for AI-generated images reflecting human intellectual effort), while Japan remains the most permissive jurisdiction for AI training on copyrighted works.
 
 **Web scraping agents and copyright.** Autonomous agents that browse and scrape the web raise intensifying copyright questions. The **NYT v. OpenAI** litigation (filed December 2023) is the bellwether case; discovery is ongoing, and in March 2026 the court ordered production of 78 million additional logs. **Bartz v. Anthropic** settled for **$1.5 billion** in August 2025 — the largest copyright recovery in U.S. history — with the judge distinguishing between lawfully obtained training data (potentially fair use) and pirated data (not fair use). A critical ruling in **Ziff Davis v. OpenAI** (2025) held that robots.txt is not a "technological measure" under the DMCA — it is more like "a sign than a barrier." The proposed **AI Accountability for Publishers Act** (draft unveiled February 2026) would make robots.txt compliance legally enforceable, override fair use for scraping, and impose treble damages. Under the EU AI Act (provisions effective August 2, 2026), general-purpose AI providers must publish structured summaries of training data and respect opt-outs under the EU Copyright Directive.
 
-**Agency law and AI acting on behalf of humans.** When an agent acts as a proxy for a human creator — negotiating licenses, publishing content, or making creative decisions — traditional agency law concepts apply unevenly. The principal-agent relationship requires a principal who assents, an agent who acts on the principal's behalf, and the principal's right to control. **Electronic agents already have legal standing** under the Uniform Electronic Transactions Act and the E-SIGN Act for forming contracts. But as Yale's Jack Balkin argues, "the law of AI is the law of risky agents without intentions" — people should not obtain a reduced duty of care by substituting AI for human agents. When Amazon alleged that Perplexity's Comet browser agent violated Amazon's terms of service by autonomously shopping, it highlighted the tension between agent autonomy and platform terms. DLA Piper warns that companies "may find themselves strictly liable for all AI agent conduct, whether or not predicted or intended."
+**Agency law and AI acting on behalf of humans.** When an agent acts as a proxy for a human creator — negotiating licenses, publishing content, or making creative decisions — traditional agency law concepts apply unevenly. The principal-agent relationship requires a principal who assents, an agent who acts on the principal's behalf, and the principal's right to control. **Electronic agents already have legal standing** under the Uniform Electronic Transactions Act and the E-SIGN Act for forming contracts. But as Yale's Jack Balkin argues, "the law of AI is the law of risky agents without intentions" — people should not obtain a reduced duty of care by substituting AI for human agents (Ayres and Balkin). When Amazon alleged that Perplexity's Comet browser agent violated Amazon's terms of service by autonomously shopping, it highlighted the tension between agent autonomy and platform terms. DLA Piper warns that companies "may find themselves strictly liable for all AI agent conduct, whether or not predicted or intended" (Tobey et al.).
 
 **Liability when an agent infringes.** The liability chain for AI-generated copyright infringement is multi-layered. Potential liable parties include the training dataset creators, model trainers (as Anthropic's $1.5 billion settlement confirms), fine-tuners, deployers, and end users. Key theories in active litigation include direct infringement (NYT alleges OpenAI outputs are substantially similar to its articles), contributory infringement (claims against Microsoft survived motions to dismiss), and inducement (claims in *Andersen v. Stability AI* survived). Under emerging EU jurisprudence, if infringement stems from user input, the user bears primary liability; if from systemic training defects, the provider does. **Colorado's AI Act** (effective June 2026) imposes a duty of reasonable care on both developers and deployers, with penalties up to $20,000 per violation.
 
@@ -98,25 +98,27 @@ AI agents are transforming independent creative workflows — research-to-script
 
 ### What changed and why it matters
 
-In 2022–2023, "prompt engineering" meant the craft of writing better natural-language instructions — role-playing prompts, few-shot examples, clever phrasing tricks. LinkedIn reported a **434% increase** in prompt engineer job postings. By 2025, however, Fast Company reported the standalone "prompt engineer" title had "all but disappeared," with 68% of firms providing prompt skills as standard training across all roles. The skill became more valuable; the siloed job became less necessary.
+In 2022–2023, "prompt engineering" meant the craft of writing better natural-language instructions — role-playing prompts, few-shot examples, clever phrasing tricks. By 2025, however, the standalone "prompt engineer" title had "all but disappeared," with 68% of firms providing prompt skills as standard training across all roles. The skill became more valuable; the siloed job became less necessary.
 
-The deeper shift was conceptual: from **"write a better prompt"** to **"design a prompting system."** As Andrej Karpathy framed it in June 2025, the LLM is a "CPU," the context window is "RAM," and the practitioner's job is to be the "operating system" — loading working memory with exactly the right information for each task. The field now prefers terms like **"context engineering"** or **"prompt orchestration"** — reflecting that modern AI systems involve chained sequences of prompts, branching logic, tool calls, and self-correction loops managed programmatically. Microsoft released **POML (Prompt Orchestration Markup Language)** in August 2025, and Stanford's SPEAR framework (January 2026) treats prompts as "first-class entities" with executable prompt algebra.
+The deeper shift was conceptual: from **"write a better prompt"** to **"design a prompting system."** As Andrej Karpathy framed it in June 2025, the LLM is a "CPU," (or the brain, the centre piece that processes the information), the context window is "RAM,"(Random Access Memory, you can think it as something to hold temporarily remembered for processing, and then the temporarily remembered things disappear when the process is over), and the practitioner's job is to be the "operating system" (something wrapping and coordinates the job of CPU and RAM) — loading working memory with exactly the right information for each task (Karpathy). The field now prefers terms like **"context engineering"** or **"prompt orchestration"** — reflecting that modern AI systems involve chained sequences of prompts, branching logic, tool calls, and self-correction loops managed programmatically. Microsoft released **POML (Prompt Orchestration Markup Language)** in August 2025, and Stanford's SPEAR framework (January 2026) treats prompts as "first-class entities" with executable prompt algebra.
 
-This shift matters for legal and policy audiences because it fundamentally changes the accountability question. When an AI system's behavior was determined by a single prompt, liability was relatively traceable. In an orchestrated system with dozens of chained prompts, multiple agents, and self-reflection loops, the question "who is responsible for this output?" becomes far more complex.
+Then, how do we weight the accountability?
+When an AI system's behavior was determined by a single prompt, liability was relatively traceable. 
+In an orchestrated system with dozens of chained prompts, multiple agents, and self-reflection loops, the question "who is responsible for this output?" becomes far more complex.
 
 ### The key techniques in plain language
 
 **Chain-of-Thought (CoT)** asks the model to show its reasoning step-by-step, like a student showing work on a math exam. It remains the most widely used advanced prompting technique and has been built directly into reasoning-focused models like OpenAI's o1 series. Its variant **Self-Consistency** generates multiple reasoning chains and selects the most common answer, improving accuracy by 6–18%.
 
-**ReAct (Reasoning + Acting)**, introduced by Yao et al. in 2022, alternates between thinking and doing — the model reasons about what it needs, takes an action (like searching the web), observes the result, and reasons again. ReAct is the conceptual bridge between prompting techniques and AI agents; it is embedded as a standard pattern in every major agent framework.
+**ReAct (Reasoning + Acting)**, introduced by Yao et al. in 2022 (Yao et al., "ReAct"), alternates between thinking and doing — the model reasons about what it needs, takes an action (like searching the web), observes the result, and reasons again. ReAct is the conceptual bridge between prompting techniques and AI agents; it is embedded as a standard pattern in every major agent framework.
 
-**Tree-of-Thought (ToT)**, from Yao et al. in 2023, extends chain-of-thought by exploring multiple reasoning paths simultaneously — like branches of a decision tree — evaluating which are promising and backtracking from dead ends. It excels at problems requiring exploration or creative planning but is more computationally expensive.
+**Tree-of-Thought (ToT)**, from Yao et al. in 2023 (Yao et al., "Tree of Thoughts"), extends chain-of-thought by exploring multiple reasoning paths simultaneously — like branches of a decision tree — evaluating which are promising and backtracking from dead ends. It excels at problems requiring exploration or creative planning but is more computationally expensive.
 
-**Constitutional AI prompting** has the model self-critique against explicit written principles. Unlike external human feedback, the evaluation criteria are transparent and auditable — a property with obvious regulatory appeal.
+**Constitutional AI prompting** (Bai et al., 2022) has the model self-critique against explicit written principles. Unlike external human feedback, the evaluation criteria are transparent and auditable — a property with obvious regulatory appeal.
 
-**Meta-prompting and self-reflection** techniques like **Reflexion** (Shinn et al., 2023) create loops where the model evaluates its own output, produces a verbal self-critique, stores it in memory, and uses that reflection to improve on the next attempt. Research confirms that LLM agents "significantly improve their problem-solving performance through self-reflection" (p < 0.001).
+**Meta-prompting and self-reflection** techniques like **Reflexion** (Shinn et al.) create loops where the model evaluates its own output, produces a verbal self-critique, stores it in memory, and uses that reflection to improve on the next attempt. Research confirms that LLM agents "significantly improve their problem-solving performance through self-reflection" (p < 0.001).
 
-More recent innovations include **Graph-of-Thought** (2024), which models reasoning as an arbitrary graph where ideas can merge and branch — increasing quality by **62%** over Tree-of-Thought while reducing costs by over 31%. **Chain-of-Draft** (2025) achieves comparable accuracy to full chain-of-thought using roughly five words per reasoning step, dramatically reducing cost and latency.
+More recent innovations include **Graph-of-Thought** (2024), which models reasoning as an arbitrary graph where ideas can merge and branch — increasing quality by **62%** over Tree-of-Thought while reducing costs by over 31% (Besta et al.). **Chain-of-Draft** (2025) achieves comparable accuracy to full chain-of-thought using roughly five words per reasoning step, dramatically reducing cost and latency (Xu et al.).
 
 ### The orchestration framework landscape
 
@@ -159,3 +161,79 @@ Across everything above, some ideas will remain relevant for a decade; others wi
 For the target audience of this module, the practical recommendation is to organize AI knowledge into three tiers. **Tier 1: permanent concepts** — the layered defense model, the human authorship requirement, parametric vs. retrieved knowledge, principal-agent liability, system-level accountability. Learn these once and deeply. **Tier 2: slow-moving frameworks** — the categories of prompting techniques (chain-of-thought, retrieval augmentation, self-reflection), the types of agent architectures (single-agent, multi-agent, orchestrated), the major regulatory approaches (risk-based, rights-based, liability-based). Update these annually. **Tier 3: fast-moving specifics** — product names, version numbers, benchmark scores, individual court decisions, specific tool capabilities. Track these through curated newsletters and briefings rather than trying to maintain comprehensive knowledge.
 
 The AI landscape is changing fast, but not everything about it changes at the same speed. The conceptual vocabulary introduced in this module — hallucination layers, agent autonomy, orchestration systems, and the durable legal principles they intersect with — provides a stable foundation from which to interpret whatever comes next.
+
+---
+
+## Works Cited
+
+### Technical and academic sources
+
+Bai, Yuntao, et al. "Constitutional AI: Harmlessness from AI Feedback." *arXiv*, 15 Dec. 2022, arxiv.org/abs/2212.08073.
+
+Besta, Maciej, et al. "Graph of Thoughts: Solving Elaborate Problems with Large Language Models." *Proceedings of the AAAI Conference on Artificial Intelligence*, vol. 38, no. 16, 2024, pp. 17682–17690.
+
+Kalai, Adam Tauman, Ofir Nachum, Santosh S. Vempala, and Edwin Zhang. "Why Language Models Hallucinate." *arXiv*, 4 Sept. 2025, arxiv.org/abs/2509.04664.
+
+Karpathy, Andrej. "Software Is Changing (Again)." AI Startup School, 17 June 2025, San Francisco. Keynote address.
+
+Lewis, Patrick, et al. "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." *Advances in Neural Information Processing Systems*, vol. 33, 2020, pp. 9459–9474.
+
+Ouyang, Long, et al. "Training Language Models to Follow Instructions with Human Feedback." *Advances in Neural Information Processing Systems*, vol. 35, 2022, pp. 27730–27744.
+
+Rafailov, Rafael, et al. "Direct Preference Optimization: Your Language Model Is Secretly a Reward Model." *Advances in Neural Information Processing Systems*, vol. 36, 2023, pp. 53728–53741.
+
+Alawadhi, Salahuddin, and Noorhan Abbas. "Optimizing Retrieval-Augmented Generation for Electrical Engineering: A Case Study on ABB Circuit Breakers." arXiv preprint arXiv:2505.17520 (2025).
+
+Schick, Timo, et al. "Toolformer: Language Models Can Teach Themselves to Use Tools." *Advances in Neural Information Processing Systems*, vol. 36, 2023, pp. 68539–68551.
+
+Sharma, Mrinank, et al. "Towards Understanding Sycophancy in Language Models." *International Conference on Learning Representations*, 2024. arXiv:2310.13548.
+
+Shinn, Noah, et al. "Reflexion: Language Agents with Verbal Reinforcement Learning." *Advances in Neural Information Processing Systems*, vol. 36, 2023, pp. 8634–8652.
+
+Transluce. *Investigating Truthfulness in a Pre-Release o3 Model*. Transluce, Apr. 2025, transluce.org/investigating-o3-truthfulness. (Non-peer-reviewed lab report; cited for its observation that o3 fabricated tool-use actions.)
+
+Wei, Jason, et al. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." *Advances in Neural Information Processing Systems*, vol. 35, 2022, pp. 24824–24837.
+
+Xu, Silei, et al. "Chain of Draft: Thinking Faster by Writing Less." *arXiv*, 25 Feb. 2025, arxiv.org/abs/2502.18600.
+
+Yao, Shunyu, et al. "ReAct: Synergizing Reasoning and Acting in Language Models." *International Conference on Learning Representations*, 2023.
+
+Yao, Shunyu, et al. "Tree of Thoughts: Deliberate Problem Solving with Large Language Models." *Advances in Neural Information Processing Systems*, vol. 36, 2023, pp. 11809–11822.
+
+### Legal cases and government sources
+
+*Andersen v. Stability AI Ltd.* N.D. Cal., 2023–present. (Ongoing — not a closed case; jury trial scheduled 8 Sept. 2026.)
+
+*Bartz v. Anthropic PBC.* No. 3:24-cv-05417, N.D. Cal., final settlement approval granted 20 July 2026.
+
+*Mata v. Avianca, Inc.* No. 22-cv-1461, S.D.N.Y., 2023.
+
+*New York Times Co. v. Microsoft Corp.* No. 1:23-cv-11195, S.D.N.Y., filed Dec. 2023. (Ongoing — not a closed case; in discovery, no trial date set.)
+
+*Thaler v. Perlmutter.* 130 F.4th 1039 (D.C. Cir. 2025), cert. denied, No. 25-449 (U.S. 2 Mar. 2026).
+
+United States Copyright Office. *Copyright and Artificial Intelligence, Part 2: Copyrightability*. U.S. Copyright Office, Jan. 2025.
+
+*Ziff Davis, Inc. v. OpenAI, Inc.* S.D.N.Y., 2025. (Ongoing — not a closed case; cited for its 2025 robots.txt/DMCA ruling.)
+
+### Commentary and industry sources
+
+Anthropic. "Donating the Model Context Protocol and Establishing the Agentic AI Foundation." *Anthropic*, 9 Dec. 2025, www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation.
+
+Ayres, Ian, and Jack M. Balkin. "The Law of AI Is the Law of Risky Agents without Intentions." *University of Chicago Law Review Online*, 2024.
+
+Cognition. "Introducing Devin, the First AI Software Engineer." *Cognition*, 12 Mar. 2024, cognition.com/blog/introducing-devin.
+
+CrewAI. *CrewAI: The Leading Multi-Agent Platform*. CrewAI, 2025, www.crewai.com. (Vendor source; the "60%+ of Fortune 500" figure is CrewAI's own adoption claim.)
+
+Gartner. "Gartner Predicts 40% of Enterprise Apps Will Feature Task-Specific AI Agents by 2026, Up from Less Than 5% in 2025." Gartner, 26 Aug. 2025, www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025.
+
+Gartner. "Gartner Predicts Over 40% of Agentic AI Projects Will Be Canceled by End of 2027." Gartner, 25 June 2025, www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027. (Source of the "agent washing" estimate that only ~130 of thousands of self-described agentic vendors are genuine.)
+
+GitHub. *GitHub Copilot: The World's Most Widely Adopted AI Developer Tool*. GitHub, 2025, github.com/features/copilot.
+
+Google. "Announcing the Agent2Agent Protocol (A2A)." *Google Developers Blog*, 9 Apr. 2025, developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/.
+
+Grand View Research. *AI Agents Market Size, Share and Trends Report, 2026–2033*. Grand View Research, 2025, www.grandviewresearch.com/industry-analysis/ai-agents-market-report.
+
+Tobey, Danny, et al. "The Rise of 'Agentic' AI: Potential New Legal and Organizational Risks." *DLA Piper*, 2025, www.dlapiper.com/en-us/insights/publications/ai-outlook/2025/the-rise-of-agentic-ai--potential-new-legal-and-organizational-risks.
