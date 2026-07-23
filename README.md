@@ -56,7 +56,7 @@ To help Law scholars and students:
 
 ### optional: Module 7 - After ChatGPT - treading in the waves of AIs
 * a walkthrough of how to understand new concepts and the new model releases. [View on GitHub](https://github.com/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/07_after_chatgpt/07_after_chatgpt.md)
-  
+* extra reading briefly talking about a few technical concepts after ChatGPT. [View on GitHub](https://github.com/WeihaoGe1009/ai-history-for-ip-scholars/blob/main/07_after_chatgpt/optional_reading_hallucination_agent_prompt_durability.md) 
 
 | Module | Title                                                  | Focus                                       | Era         | Historical Role                                                                 |
 | ------ | ------------------------------------------------------ | ------------------------------------------- | ----------- | ------------------------------------------------------------------------------- |
