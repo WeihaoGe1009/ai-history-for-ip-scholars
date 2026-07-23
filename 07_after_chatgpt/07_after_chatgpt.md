@@ -1,4 +1,4 @@
-# Module 07: AI After ChatGPT — Reading the Next Announcement
+# Module 07: AI After ChatGPT — treading water in the wave of AI 
 
 *This module has no code to run. The object of study is text: the terms, announcements, and claims the reader will keep meeting after this series ends. What it hands over is a way to read three kinds of AI writing that keep reappearing — a new term, a product announcement, and an old argument in new dress — using questions that will still work when every product named here is gone.*
 
